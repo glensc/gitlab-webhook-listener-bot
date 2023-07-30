@@ -3,12 +3,14 @@ import { LoggerInterface } from "./services/logger";
 import { Handler } from "./handlers/handler";
 
 export class WebHookHandler {
-  private readonly handlers: Record<string, Handler[]>;
+  private handlers: Record<string, Handler[]> = {};
 
   public constructor(
-    handlers: Handler[],
     private readonly logger: LoggerInterface,
   ) {
+  }
+
+  public setHandlers(handlers: Handler[]): void {
     this.handlers = this.configureHandlers(handlers);
   }
 
