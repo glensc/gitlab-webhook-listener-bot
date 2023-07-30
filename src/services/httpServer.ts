@@ -1,3 +1,4 @@
+import bodyParser from "body-parser";
 import express from "express";
 
 import routes from "./routes";
@@ -7,6 +8,7 @@ const port = 3000;
 const prefix = "/";
 const url = `http://localhost:${port}${prefix}`;
 
+app.use(bodyParser.json());
 app.use(prefix, routes);
 app.set("prefix", prefix);
 app.set("port", port);
