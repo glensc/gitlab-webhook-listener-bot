@@ -4,6 +4,11 @@
   "homepage": "https://github.com/glensc/gitlab-webhook-listener-bot",
   "license": "MIT",
   "main": "build/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "ngrok": "ngrok --config ngrok.yml start app",
