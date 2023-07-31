@@ -3,6 +3,13 @@
   "description": "Listen to GitLab WebHook and execute actions",
   "homepage": "https://github.com/glensc/gitlab-webhook-listener-bot",
   "license": "MIT",
+  "keywords": [
+    "gitlab",
+    "git",
+    "hook",
+    "listener",
+    "webhook"
+  ],
   "main": "build/index.js",
   "exports": {
     "./package.json": "./package.json",
