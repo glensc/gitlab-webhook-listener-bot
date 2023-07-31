@@ -6,7 +6,7 @@ import routes from "./routes";
 const app = express();
 const port = 3000;
 const prefix = "/";
-const url = `http://localhost:${port}${prefix}`;
+const url = new URL(`http://localhost:${port}${prefix}`);
 
 app.use(bodyParser.json());
 app.use(prefix, routes);

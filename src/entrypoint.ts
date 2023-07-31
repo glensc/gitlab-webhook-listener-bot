@@ -2,6 +2,7 @@ import server from "./services/httpServer";
 import { LoggerInterface } from "./services/logger";
 import webHookHandler from "./services/webHookHandler";
 import { Handler } from "./handlers/handler";
+import { urlPath } from "./urlPath";
 
 type Options = {
   handlers?: Handler[],
@@ -21,9 +22,11 @@ export const main = ({
   const port = server.get("port");
 
   server.listen(port, () => {
-    const url = server.get("url");
+    const url: URL = server.get("url");
 
     logger.info("🕔 The server is now running at:");
     logger.info(` - ${url}`);
+    logger.info(` - ${urlPath(url, "/probes/readiness")}`);
+    logger.info(` - ${urlPath(url, "/probes/liveness")}`);
   });
 };
