@@ -8,6 +8,11 @@ and do actions based on context.
 
 The project acts as a building block for you to create your own handlers.
 
+## Similar projects
+
+- https://github.com/kolomiichenko/gitlab-webhooker - write callbacks as handlers. unmaintained.
+- https://github.com/nanoy42/gitlab-webhook-telegram - sends events to telegram.
+
 ## Example
 
 This will execute code to re-run renovate bot if the `[x]` check is checked.
