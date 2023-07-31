@@ -1,0 +1,18 @@
+// https://www.typescriptlang.org/docs/handbook/compiler-options.html
+{
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build",
+    "declaration": true,
+    "sourceMap": true,
+    "pretty": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
+    ],
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
