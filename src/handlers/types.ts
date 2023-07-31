@@ -36,7 +36,7 @@ export interface Payload extends Record<string, object | string> {
   user: UserRecord;
   project: Record<string, string>;
   object_attributes: ObjectAttributes;
-  labels: Record<string, number | string | null>;
+  labels: Label[],
   changes: {
     description?: PreviousCurrentRecord<string>;
     last_edited_at?: PreviousCurrentRecord<string>;
