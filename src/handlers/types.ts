@@ -38,3 +38,8 @@ export interface MergeRequestPayload extends Payload {
   object_kind: "merge_request";
   event_type: "merge_request";
 }
+
+export interface IssuePayload extends Payload {
+  object_kind: "issue";
+  event_type: "issue";
+}
