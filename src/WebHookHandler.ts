@@ -20,8 +20,16 @@ export class WebHookHandler {
       return;
     }
 
-    this.logger.debug(`Handling event of type: ${payload.event_type}`);
-    for (const handler of Object.values(this.handlers[payload.event_type] || [])) {
+    const {
+      event_type,
+      user: {
+        name: user_name,
+        username: user_handle,
+      },
+    } = payload;
+
+    this.logger.debug(`Handling event of type: ${event_type} by @${user_handle} (${user_name})`);
+    for (const handler of Object.values(this.handlers[event_type] || [])) {
       await handler.handle(payload);
     }
   }
