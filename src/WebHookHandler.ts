@@ -30,7 +30,11 @@ export class WebHookHandler {
 
     this.logger.debug(`Handling event of type: ${event_type} by @${user_handle} (${user_name})`);
     for (const handler of Object.values(this.handlers[event_type] || [])) {
-      await handler.handle(payload);
+      try {
+        await handler.handle(payload);
+      } catch (e: any) {
+        this.logger.error(`Handler ${handler.constructor.name} crashed: ${e.message}`);
+      }
     }
   }
 
