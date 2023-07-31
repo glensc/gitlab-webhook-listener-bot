@@ -41,6 +41,7 @@ export interface Payload extends Record<string, object | string> {
     description?: PreviousCurrentRecord<string>;
     last_edited_at?: PreviousCurrentRecord<string>;
     updated_at?: PreviousCurrentRecord<string>;
+    labels?: PreviousCurrentRecord<Label[]>;
   };
   repository: Record<string, string>;
   assignees: UserRecord[];
