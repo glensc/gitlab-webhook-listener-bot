@@ -10,7 +10,7 @@
     "listener",
     "webhook"
   ],
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "exports": {
     "./package.json": "./package.json",
     ".": "./dist/index.js"
