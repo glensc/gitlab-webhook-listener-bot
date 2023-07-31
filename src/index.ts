@@ -1,5 +1,5 @@
-export { main as default } from "./entrypoint";
-export { main } from "./entrypoint";
+export { main as default } from "./main";
+export { main } from "./main";
 export { default as logger } from "./services/logger";
 
 // Reusable classes and types
