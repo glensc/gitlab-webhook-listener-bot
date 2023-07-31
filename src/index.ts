@@ -2,6 +2,11 @@ export { main as default } from "./entrypoint";
 export { main } from "./entrypoint";
 export { default as logger } from "./services/logger";
 
-// Reusable classes
+// Reusable classes and types
+export type { Handler } from "./handlers/handler"
+export type { IssuePayload } from "./handlers/types";
+export type { LoggerInterface } from "./services/logger";
+export type { MergeRequestPayload } from "./handlers/types";
+
+export { BaseHandler } from "./handlers/base_handler";
 export { MergeRequestHandler } from "./handlers/merge_request_handler";
-export { MergeRequestPayload } from "./handlers/types";

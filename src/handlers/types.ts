@@ -1,6 +1,19 @@
-type PreviousCurrentRecord = {
-  previous: string;
-  current: string;
+type PreviousCurrentRecord<T> = {
+  previous: T;
+  current: T;
+};
+
+type Label = {
+  id: number,
+  title: string,
+  color: string,
+  project_id: number | null,
+  created_at: string,
+  updated_at: string,
+  template: boolean,
+  description: string,
+  type: "GroupLabel" | "ProjectLabel",
+  group_id: number | null,
 };
 
 type UserRecord = {
@@ -23,11 +36,12 @@ export interface Payload extends Record<string, object | string> {
   user: UserRecord;
   project: Record<string, string>;
   object_attributes: ObjectAttributes;
-  labels: Record<string, number | string | null>;
+  labels: Label[],
   changes: {
-    description: PreviousCurrentRecord;
-    last_edited_at: PreviousCurrentRecord;
-    updated_at: PreviousCurrentRecord;
+    description?: PreviousCurrentRecord<string>;
+    last_edited_at?: PreviousCurrentRecord<string>;
+    updated_at?: PreviousCurrentRecord<string>;
+    labels?: PreviousCurrentRecord<Label[]>;
   };
   repository: Record<string, string>;
   assignees: UserRecord[];
@@ -37,4 +51,9 @@ export interface Payload extends Record<string, object | string> {
 export interface MergeRequestPayload extends Payload {
   object_kind: "merge_request";
   event_type: "merge_request";
+}
+
+export interface IssuePayload extends Payload {
+  object_kind: "issue";
+  event_type: "issue";
 }
