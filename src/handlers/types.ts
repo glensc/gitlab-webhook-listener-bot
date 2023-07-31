@@ -1,6 +1,6 @@
-type PreviousCurrentRecord = {
-  previous: string;
-  current: string;
+type PreviousCurrentRecord<T> = {
+  previous: T;
+  current: T;
 };
 
 type UserRecord = {
@@ -25,9 +25,9 @@ export interface Payload extends Record<string, object | string> {
   object_attributes: ObjectAttributes;
   labels: Record<string, number | string | null>;
   changes: {
-    description: PreviousCurrentRecord;
-    last_edited_at: PreviousCurrentRecord;
-    updated_at: PreviousCurrentRecord;
+    description: PreviousCurrentRecord<string>;
+    last_edited_at: PreviousCurrentRecord<string>;
+    updated_at: PreviousCurrentRecord<string>;
   };
   repository: Record<string, string>;
   assignees: UserRecord[];
