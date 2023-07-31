@@ -1,21 +1,6 @@
-# Gitlab WebHook Listener Bot
+import { MergeRequestHandler, MergeRequestPayload } from "../../src";
 
-This project will listen for GitLab webhook events,
-and do actions based on context.
-
-- https://docs.gitlab.com/ee/user/project/integrations/webhooks.html
-- https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html
-
-The project acts as a building block for you to create your own handlers.
-
-## Example
-
-This will execute code to re-run renovate bot if the `[x]` check is checked.
-
-```ts
-import { main, logger, MergeRequestHandler } from "gitlab-webhook-listener-bot";
-
-class RenovateRebase extends MergeRequestHandler {
+export class RenovateRebase extends MergeRequestHandler {
   public async handle({
                         object_attributes: {
                           source_branch,
@@ -38,21 +23,12 @@ class RenovateRebase extends MergeRequestHandler {
       state !== "opened" ||
       action !== "update" ||
       !source_branch.startsWith("renovate/") ||
-      !description.includes('[x] <!-- rebase-check -->')) {
+      !description.includes("[x] <!-- rebase-check -->")) {
 
       this.logger.debug("Will not do renovate bot rebase");
       return;
     }
 
     this.logger.debug("Renovate bot wants rebase");
-    // TODO: write code
   }
 }
-
-main({
-  logger,
-  handlers: [
-    new RenovateRebase(logger),
-  ],
-});
-```
