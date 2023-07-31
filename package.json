@@ -6,6 +6,7 @@
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",
+    "ngrok": "ngrok --config ngrok.yml start app",
     "start": "tsx src/main.ts"
   },
   "engines": {
