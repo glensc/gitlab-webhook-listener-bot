@@ -24,7 +24,7 @@ type UserRecord = {
   email: string,
 };
 
-interface ObjectAttributes extends Record<string, object | string | boolean> {
+interface ObjectAttributes extends Record<string, object | string | number | boolean | null> {
   source_branch: string;
   action: string;
   state: string;
