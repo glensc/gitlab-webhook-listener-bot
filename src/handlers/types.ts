@@ -16,6 +16,10 @@ type Label = {
   group_id: number | null,
 };
 
+interface Project extends Record<string, string> {
+  path_with_namespace: string,
+}
+
 type UserRecord = {
   id: number,
   name: string,
@@ -42,7 +46,7 @@ export interface Payload extends Record<string, object | string> {
   object_kind: string;
   event_type: string;
   user: UserRecord;
-  project: Record<string, string>;
+  project: Project;
   object_attributes: ObjectAttributes;
   labels: Label[],
   changes: {
