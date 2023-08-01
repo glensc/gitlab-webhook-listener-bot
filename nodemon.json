@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "demo",
+    "src"
+  ],
+  "execMap": {
+    "ts": "tsx"
+  },
+  "ext": "ts"
+}
