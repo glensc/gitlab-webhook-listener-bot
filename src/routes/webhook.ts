@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import logger from "../logger";
-import webHookHandler from "../webHookHandler";
+import logger from "../services/logger";
+import webHookHandler from "../services/webHookHandler";
 
 // Listener for GitLab WebHooks
 export default async ({ body: payload, headers }: Request, res: Response) => {
