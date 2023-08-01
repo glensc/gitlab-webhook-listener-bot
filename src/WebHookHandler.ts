@@ -15,8 +15,13 @@ export class WebHookHandler {
   }
 
   public async handle({ headers, payload }: Event): Promise<void> {
-    if (!headers["x-gitlab-event"]) {
-      this.logger.debug("No X-Gitlab-Event header");
+    const {
+      "x-gitlab-event": event_name,
+      "x-gitlab-event-uuid": event_uuid,
+    } = headers;
+
+    if (!event_name || !event_uuid) {
+      this.logger.debug("No X-Gitlab-Event or X-Gitlab-Event-UUID header");
       return;
     }
 
@@ -28,7 +33,7 @@ export class WebHookHandler {
       },
     } = payload;
 
-    this.logger.debug(`Handling event of type: ${event_type} by @${user_handle} (${user_name})`);
+    this.logger.debug(`Handling event ${event_uuid} of type: ${event_type} by @${user_handle} (${user_name})`);
     for (const handler of Object.values(this.handlers[event_type] || [])) {
       await handler.handle(payload);
     }
