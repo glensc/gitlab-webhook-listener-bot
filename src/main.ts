@@ -3,6 +3,7 @@ import { LoggerInterface } from "./services/logger";
 import { Handler } from "./handlers/handler";
 import { urlPath } from "./urlPath";
 import handlerRegister from "./services/handlers";
+import worker from "./services/worker";
 
 type Options = {
   handlers?: Handler[],
@@ -16,6 +17,7 @@ export const main = ({
 
   if (handlers) {
     handlerRegister.addHandlers(handlers);
+    worker.start();
   }
 
   logger.info("🕞 Starting webserver");

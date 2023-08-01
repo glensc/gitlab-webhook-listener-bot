@@ -1,5 +1,5 @@
 import { WebHookHandler } from "../WebHookHandler";
 import logger from "./logger";
-import handlerRegister from "./handlers";
+import queue from "./queue";
 
-export default new WebHookHandler(handlerRegister, logger);
+export default new WebHookHandler(queue, logger);
