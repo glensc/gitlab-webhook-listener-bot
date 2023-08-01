@@ -8,7 +8,12 @@ export class Queue<T = Event> {
   }
 
   public get() {
-    return this.q.shift();
+    const event = this.q.shift();
+    if (event === undefined) {
+      throw new Error("Queue is empty");
+    }
+
+    return event;
   }
 
   public size() {
