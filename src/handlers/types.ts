@@ -28,6 +28,7 @@ interface ObjectAttributes extends Record<string, object | string | boolean> {
   source_branch: string;
   action: string;
   state: string;
+  last_commit: Record<string, object | string | boolean>;
 }
 
 type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
