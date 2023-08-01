@@ -1,6 +1,5 @@
 import server from "./services/httpServer";
 import { LoggerInterface } from "./services/logger";
-import webHookHandler from "./services/webHookHandler";
 import { Handler } from "./handlers/handler";
 import { urlPath } from "./urlPath";
 import handlerRegister from "./services/handlers";
