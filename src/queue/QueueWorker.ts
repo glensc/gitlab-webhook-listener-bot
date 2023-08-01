@@ -14,6 +14,10 @@ export class QueueWorker {
   ) {
   }
 
+  public start() {
+    setImmediate(() => this.run());
+  }
+
   public async run() {
     while (true) {
       if (this.queue.size()) {
