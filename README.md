@@ -16,36 +16,39 @@ This will execute code to re-run renovate bot if the `[x]` check is checked.
 import { main, logger, MergeRequestHandler } from "gitlab-webhook-listener-bot";
 
 class RenovateRebase extends MergeRequestHandler {
-  public async handle({
-                        object_attributes: {
-                          source_branch,
-                          action,
-                          state,
-                        },
-                        changes: {
-                          description: {
-                            current: description
-                          },
-                        },
-                      }: MergeRequestPayload): Promise<void> {
-
-    this.logger.debug("Check renovate rebase");
-
-    // Must be an opened mr whose status is updated
-    // and branch is renovate branch
-    // and rebase checkbox is checked.
-    if (
-      state !== "opened" ||
-      action !== "update" ||
-      !source_branch.startsWith("renovate/") ||
-      !description.includes('[x] <!-- rebase-check -->')) {
-
-      this.logger.debug("Will not do renovate bot rebase");
+  public async handle(payload: MergeRequestPayload): Promise<void> {
+    if (!this.isValid(payload)) {
       return;
     }
 
     this.logger.debug("Renovate bot wants rebase");
-    // TODO: write code
+    // TODO: create pipeline
+    // code here to do the actual action
+  }
+
+  /**
+   * Must be an opened mr whose status is updated
+   * and branch is renovate branch
+   * and rebase checkbox is checked.
+   */
+  private isValid(payload: MergeRequestPayload): boolean {
+    const {
+      object_attributes: {
+        source_branch,
+        action,
+        state,
+      },
+      changes: {
+        description,
+      },
+    } = payload;
+
+    return (
+      state === "opened" &&
+      action === "update" &&
+      source_branch.startsWith("renovate/") &&
+      (description?.current || "").includes("[x] <!-- rebase-check -->")
+    );
   }
 }
 
