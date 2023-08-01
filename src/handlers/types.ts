@@ -20,7 +20,7 @@ interface Project extends Record<string, string> {
   path_with_namespace: string,
 }
 
-type UserRecord = {
+type User = {
   id: number,
   name: string,
   username: string,
@@ -45,7 +45,7 @@ type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
 export interface Payload extends Record<string, object | string> {
   object_kind: string;
   event_type: string;
-  user: UserRecord;
+  user: User;
   project: Project;
   object_attributes: ObjectAttributes;
   labels: Label[],
@@ -60,8 +60,8 @@ export interface Payload extends Record<string, object | string> {
     updated_by_id?: PreviousCurrentRecord<number>;
   };
   repository: Record<string, string>;
-  assignees: UserRecord[];
-  reviewers: UserRecord[];
+  assignees: User[];
+  reviewers: User[];
 }
 
 export interface MergeRequestPayload extends Payload {
