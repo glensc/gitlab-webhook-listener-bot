@@ -29,6 +29,11 @@ interface ObjectAttributes extends Record<string, object | string | number | boo
   action: string;
   state: string;
   last_commit: Record<string, object | string | boolean>;
+  iid: number;
+  title: string;
+  url: string;
+  merge_status: string;
+  head_pipeline_id: number | null;
 }
 
 type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
