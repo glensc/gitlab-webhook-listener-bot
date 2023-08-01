@@ -30,6 +30,8 @@ interface ObjectAttributes extends Record<string, object | string | boolean> {
   state: string;
 }
 
+type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
+
 export interface Payload extends Record<string, object | string> {
   object_kind: string;
   event_type: string;
