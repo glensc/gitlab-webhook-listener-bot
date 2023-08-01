@@ -21,7 +21,7 @@
     "ngrok": "ngrok --config ngrok.yml start app",
     "prepublishOnly": "set -e; yarn install; yarn build",
     "set-version": "yarn version --new-version $APP_VERSION --no-git-tag-version",
-    "start": "tsx demo"
+    "start": "nodemon demo/src/demo.ts"
   },
   "engines": {
     "node": ">=18"

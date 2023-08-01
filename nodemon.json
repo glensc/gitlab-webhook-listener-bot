@@ -1,5 +1,6 @@
 {
   "watch": [
+    "demo",
     "src"
   ],
   "execMap": {
