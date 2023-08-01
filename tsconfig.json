@@ -1,6 +1,6 @@
 // https://www.typescriptlang.org/docs/handbook/compiler-options.html
 {
-  "extends": "@tsconfig/node14/tsconfig.json",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
