@@ -12,6 +12,7 @@ The project acts as a building block for you to create your own handlers.
 
 - https://github.com/kolomiichenko/gitlab-webhooker - write callbacks as handlers. unmaintained.
 - https://github.com/nanoy42/gitlab-webhook-telegram - sends events to telegram.
+- https://github.com/glensc/gitlab-registry-cleanup-hook - deletes related docker images on merge
 
 ## Example
 
