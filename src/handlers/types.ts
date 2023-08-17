@@ -80,3 +80,7 @@ export interface IssuePayload extends Payload {
   object_kind: "issue";
   event_type: "issue";
 }
+
+export interface DeploymentPayload extends Payload {
+  object_kind: "deployment";
+}
