@@ -42,9 +42,8 @@ interface ObjectAttributes extends Record<string, object | string | number | boo
 
 type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
 
-export interface Payload extends Record<string, object | string> {
+export interface Payload extends Record<string, object | string | number | null> {
   object_kind: string;
-  event_type: string;
   user: User;
   project: Project;
   object_attributes: ObjectAttributes;
@@ -80,4 +79,22 @@ export interface MergeRequestPayload extends Payload {
 export interface IssuePayload extends Payload {
   object_kind: "issue";
   event_type: "issue";
+}
+
+export interface DeploymentPayload extends Payload {
+  object_kind: "deployment";
+  status: "running" | "failed" | "success" | "canceled";
+  status_changed_at: string;
+  deployment_id: number;
+  deployable_id: number;
+  deployable_url: string;
+  environment: string;
+  environment_tier: string;
+  environment_slug: string;
+  environment_external_url: string | null;
+  short_sha: string;
+  user_url: string;
+  commit_url: string;
+  commit_title: string;
+  ref: string;
 }

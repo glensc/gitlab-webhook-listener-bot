@@ -32,9 +32,10 @@ export class QueueWorker {
   private async handle({ payload }: Event) {
     const {
       event_type,
+      object_kind,
     } = payload;
 
-    for (const handler of this.handlers.getHandlersByEventType(event_type)) {
+    for (const handler of this.handlers.getHandlersByEventType(event_type || object_kind)) {
       try {
         await handler.handle(payload);
       } catch (e: any) {

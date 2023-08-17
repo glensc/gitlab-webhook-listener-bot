@@ -7,6 +7,8 @@ export type { Handler } from "./handlers/handler"
 export type { IssuePayload } from "./handlers/types";
 export type { LoggerInterface } from "./services/logger";
 export type { MergeRequestPayload } from "./handlers/types";
+export type { DeploymentPayload } from "./handlers/types";
 
 export { BaseHandler } from "./handlers/base_handler";
 export { MergeRequestHandler } from "./handlers/merge_request_handler";
+export { DeploymentHandler } from "./handlers/deployment_handler";
