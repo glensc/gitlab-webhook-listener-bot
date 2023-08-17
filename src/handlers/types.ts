@@ -42,7 +42,7 @@ interface ObjectAttributes extends Record<string, object | string | number | boo
 
 type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
 
-export interface Payload extends Record<string, object | string> {
+export interface Payload extends Record<string, object | string | number | null> {
   object_kind: string;
   user: User;
   project: Project;
