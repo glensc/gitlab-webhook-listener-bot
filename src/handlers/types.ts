@@ -64,13 +64,17 @@ export interface Payload extends Record<string, object | string> {
   reviewers: User[];
 }
 
-export interface MergeRequestPayload extends Payload {
-  object_kind: "merge_request";
-  event_type: "merge_request";
+interface MergeRequestObjectAttributes extends ObjectAttributes {
   target_branch: string;
   target: {
     default_branch: string;
   },
+}
+
+export interface MergeRequestPayload extends Payload {
+  object_kind: "merge_request";
+  event_type: "merge_request";
+  object_attributes: MergeRequestObjectAttributes;
 }
 
 export interface IssuePayload extends Payload {
