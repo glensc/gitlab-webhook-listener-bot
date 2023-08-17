@@ -11,3 +11,4 @@ export type { DeploymentPayload } from "./handlers/types";
 
 export { BaseHandler } from "./handlers/base_handler";
 export { MergeRequestHandler } from "./handlers/merge_request_handler";
+export { DeploymentHandler } from "./handlers/deployment_handler";
