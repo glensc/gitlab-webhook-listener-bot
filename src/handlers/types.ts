@@ -44,7 +44,6 @@ type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
 
 export interface Payload extends Record<string, object | string> {
   object_kind: string;
-  event_type: string;
   user: User;
   project: Project;
   object_attributes: ObjectAttributes;
