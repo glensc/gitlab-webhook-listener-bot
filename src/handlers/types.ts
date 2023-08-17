@@ -67,6 +67,10 @@ export interface Payload extends Record<string, object | string> {
 export interface MergeRequestPayload extends Payload {
   object_kind: "merge_request";
   event_type: "merge_request";
+  target_branch: string;
+  target: {
+    default_branch: string;
+  },
 }
 
 export interface IssuePayload extends Payload {
