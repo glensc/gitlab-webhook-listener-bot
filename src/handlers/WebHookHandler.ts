@@ -30,7 +30,7 @@ export class WebHookHandler {
       username: user_handle,
     } = user || {};
 
-    this.logger.debug(`Received event ${event_uuid} of type: ${event_type || object_kind} by @${user_handle} (${user_name})`);
+    this.logger.debug(`Received ${event_type || object_kind} event ${event_uuid} by @${user_handle} (${user_name})`);
     this.queue.put(event);
   }
 }
