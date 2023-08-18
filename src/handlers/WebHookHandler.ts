@@ -23,11 +23,12 @@ export class WebHookHandler {
     const {
       event_type,
       object_kind,
-      user: {
-        name: user_name,
-        username: user_handle,
-      },
+      user,
     } = event.payload;
+    const {
+      name: user_name,
+      username: user_handle,
+    } = user || {};
 
     this.logger.debug(`Received event ${event_uuid} of type: ${event_type || object_kind} by @${user_handle} (${user_name})`);
     this.queue.put(event);
