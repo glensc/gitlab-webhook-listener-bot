@@ -4,8 +4,9 @@ import { MergeRequestObjectAttributes } from "./MergeRequestObjectAttributes";
 import { Project } from "./Project";
 import { Repository } from "./Repository";
 import { User } from "./User";
+import { Payload } from "./Payload";
 
-export interface MergeRequestPayload {
+export interface MergeRequestPayload extends Payload {
   object_kind: "merge_request";
   event_type: "merge_request";
   user: User;

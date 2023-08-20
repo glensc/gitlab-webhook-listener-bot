@@ -1,7 +1,8 @@
 import { Project } from "./Project";
 import { User } from "./User";
+import { Payload } from "./Payload";
 
-export interface DeploymentPayload {
+export interface DeploymentPayload extends Payload {
   object_kind: "deployment";
   status: "running" | "failed" | "success" | "canceled";
   status_changed_at: string;
