@@ -7,6 +7,6 @@ export interface Label {
   updated_at: string;
   template: boolean;
   description: string | null;
-  type: string;
+  type: "GroupLabel" | "ProjectLabel",
   group_id: number | null,
 }
