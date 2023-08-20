@@ -1,4 +1,4 @@
-import { Payload } from "./types";
+import { Payload } from "../payload";
 
 export interface Handler {
   event_type: string;

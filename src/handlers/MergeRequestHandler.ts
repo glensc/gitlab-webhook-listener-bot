@@ -1,6 +1,6 @@
 import { BaseHandler } from "./BaseHandler";
 import { Handler } from "./Handler";
-import { MergeRequestPayload } from "./types";
+import { MergeRequestPayload } from "../payload";
 
 export abstract class MergeRequestHandler extends BaseHandler implements Handler {
   public event_type = "merge_request";
