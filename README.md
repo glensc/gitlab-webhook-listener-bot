@@ -17,10 +17,6 @@ import { main, logger, MergeRequestHandler } from "gitlab-webhook-listener-bot";
 
 class RenovateRebase extends MergeRequestHandler {
   public async handle(payload: MergeRequestPayload): Promise<void> {
-    if (!this.isValid(payload)) {
-      return;
-    }
-
     this.logger.debug("Renovate bot wants rebase");
     // TODO: create pipeline
     // code here to do the actual action
@@ -31,7 +27,7 @@ class RenovateRebase extends MergeRequestHandler {
    * and branch is renovate branch
    * and rebase checkbox is checked.
    */
-  private isValid(payload: MergeRequestPayload): boolean {
+  public isValid(payload: MergeRequestPayload): boolean {
     const {
       object_attributes: {
         source_branch,
