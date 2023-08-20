@@ -6,8 +6,8 @@ import { Repository } from "./Repository";
 import { User } from "./User";
 
 export interface MergeRequestPayload {
-  object_kind: string;
-  event_type: string;
+  object_kind: "merge_request";
+  event_type: "merge_request";
   user: User;
   project: Project;
   object_attributes: MergeRequestObjectAttributes;

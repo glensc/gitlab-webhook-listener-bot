@@ -6,8 +6,8 @@ import { Repository } from "./Repository";
 import { User } from "./User";
 
 export interface IssuePayload {
-  object_kind: string;
-  event_type: string;
+  object_kind: "issue";
+  event_type: "issue";
   user: User;
   project: Project;
   object_attributes: IssueObjectAttributes;
