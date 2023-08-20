@@ -1,6 +1,6 @@
 import server from "./services/httpServer";
 import { LoggerInterface } from "./services/logger";
-import { Handler } from "./handlers/handler";
+import { Handler } from "./handlers/Handler";
 import { urlPath } from "./urlPath";
 import handlerRegister from "./services/handlers";
 import worker from "./services/worker";
