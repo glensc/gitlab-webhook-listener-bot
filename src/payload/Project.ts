@@ -3,7 +3,7 @@ export interface Project {
   name: string;
   description: string | null;
   web_url: string;
-  avatar_url?: null;
+  avatar_url: string | null;
   git_ssh_url: string;
   git_http_url: string;
   namespace: string;

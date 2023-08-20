@@ -12,15 +12,15 @@ export interface MergeRequestObjectAttributes {
   iid: number;
   last_edited_at: string | null;
   last_edited_by_id: number | null;
-  merge_commit_sha?: null;
-  merge_error?: null;
+  merge_commit_sha: string | null;
+  merge_error: string | null;
   merge_params: {
     force_remove_source_branch: "1" | true;
   };
   merge_status: string;
-  merge_user_id?: null;
+  merge_user_id: string | null;
   merge_when_pipeline_succeeds: boolean;
-  milestone_id?: null;
+  milestone_id: string| null;
   source_branch: string;
   source_project_id: number;
   state_id: number;
@@ -44,12 +44,12 @@ export interface MergeRequestObjectAttributes {
   work_in_progress: boolean;
   total_time_spent: number;
   time_change: number;
-  human_total_time_spent?: null;
-  human_time_change?: null;
-  human_time_estimate?: null;
+  human_total_time_spent: string | null;
+  human_time_change: string | null;
+  human_time_estimate: string | null;
   assignee_ids: number[] | null;
   reviewer_ids: number[] | null;
-  labels?: Label[] | null;
+  labels: Label[] | null;
   state: string;
   blocking_discussions_resolved: boolean;
   first_contribution: boolean;
