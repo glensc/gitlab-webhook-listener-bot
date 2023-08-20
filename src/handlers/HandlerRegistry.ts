@@ -1,4 +1,4 @@
-import { Handler } from "./handler";
+import { Handler } from "./Handler";
 import { LoggerInterface } from "../services/logger";
 
 export class HandlerRegistry {

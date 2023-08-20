@@ -1,5 +1,5 @@
-import { BaseHandler } from "./base_handler";
-import { Handler } from "./handler";
+import { BaseHandler } from "./BaseHandler";
+import { Handler } from "./Handler";
 import { DeploymentPayload } from "./types";
 
 export abstract class DeploymentHandler extends BaseHandler implements Handler {
