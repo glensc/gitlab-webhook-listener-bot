@@ -1,6 +1,6 @@
 import { BaseHandler } from "./BaseHandler";
 import { Handler } from "./Handler";
-import { DeploymentPayload } from "./types";
+import { DeploymentPayload } from "../payload";
 
 export abstract class DeploymentHandler extends BaseHandler implements Handler {
   public event_type = "deployment";
