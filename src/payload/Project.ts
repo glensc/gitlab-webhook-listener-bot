@@ -1,7 +1,7 @@
 export interface Project {
   id: number;
   name: string;
-  description?: null;
+  description: string | null;
   web_url: string;
   avatar_url?: null;
   git_ssh_url: string;
@@ -10,7 +10,7 @@ export interface Project {
   visibility_level: number;
   path_with_namespace: string;
   default_branch: string;
-  ci_config_path: string;
+  ci_config_path: string | null;
   homepage: string;
   url: string;
   ssh_url: string;
