@@ -5,12 +5,14 @@ type PreviousAndCurrent<T> = {
   current: T;
 };
 
+type MergeStatus = "unchecked" | "preparing" | "can_be_merged";
+
 export interface Changes {
   description?: PreviousAndCurrent<string>;
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<string>;
   last_edited_by_id?: PreviousAndCurrent<number>;
-  merge_status?: PreviousAndCurrent<string>;
+  merge_status?: PreviousAndCurrent<MergeStatus | string>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
   title?: PreviousAndCurrent<string>;
