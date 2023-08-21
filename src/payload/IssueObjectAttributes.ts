@@ -1,4 +1,3 @@
-import { Label } from "./Label";
 import { ObjectAttributes } from "./ObjectAttributes";
 
 export interface IssueObjectAttributes extends ObjectAttributes {
