@@ -20,12 +20,14 @@ export class HandlerRegistry {
         continue;
       }
 
-      if (!this.handlers[handler.event_type]) {
-        this.handlers[handler.event_type] = [];
-      }
+      for (const event_type of [handler.event_type]) {
+        if (!this.handlers[event_type]) {
+          this.handlers[event_type] = [];
+        }
 
-      this.logger.debug(`Register "${handler.event_type}" handler: ${handler.constructor.name}`);
-      this.handlers[handler.event_type].push(handler)
+        this.logger.debug(`Register "${event_type}" handler: ${handler.constructor.name}`);
+        this.handlers[event_type].push(handler)
+      }
     }
   }
 }
