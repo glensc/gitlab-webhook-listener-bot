@@ -2,7 +2,7 @@ import { setTimeout } from "node:timers/promises";
 import { Queue } from "./Queue";
 import { LoggerInterface } from "../services/logger";
 import { Event } from "../types";
-import { HandlerRegistry } from "../handlers/HandlerRegistry";
+import { HandlerRegistry } from "../core/HandlerRegistry";
 
 export class QueueWorker {
   private readonly interval = 1000;
