@@ -1,10 +1,12 @@
+import { DateTime } from "./types";
+
 export interface Label {
   id: number;
   title: string;
   color: string;
   project_id: number | null,
-  created_at: string;
-  updated_at: string;
+  created_at: DateTime;
+  updated_at: DateTime;
   template: boolean;
   description: string | null;
   type: "GroupLabel" | "ProjectLabel",

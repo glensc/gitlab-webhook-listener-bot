@@ -1,4 +1,5 @@
 import { Label } from "./Label";
+import { DateTime } from "./types";
 
 export interface ObjectAttributes {
   id: number;
@@ -6,12 +7,12 @@ export interface ObjectAttributes {
   state: string;
   state_id: number;
   action: string;
-  created_at: string;
+  created_at: DateTime;
   author_id: number;
   assignee_id: number;
-  last_edited_at: string | null;
+  last_edited_at: DateTime | null;
   last_edited_by_id: number | null;
-  updated_at: string;
+  updated_at: DateTime;
   updated_by_id: number | null;
   title: string;
   description: string;

@@ -1,7 +1,8 @@
 import { ObjectAttributes } from "./ObjectAttributes";
+import { DateTime } from "./types";
 
 export interface IssueObjectAttributes extends ObjectAttributes {
-  closed_at: string;
+  closed_at: DateTime;
   confidential: boolean;
   discussion_locked: true | null;
   due_date: string | null;
