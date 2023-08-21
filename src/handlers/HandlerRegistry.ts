@@ -15,12 +15,12 @@ export class HandlerRegistry {
 
   public addHandlers(handlers: Handler[]): void {
     for (const handler of handlers) {
-      if (!handler.event_type) {
-        this.logger.error(`Handler does not define event_type: ${handler.constructor.name}`);
+      if (!handler.event_types) {
+        this.logger.error(`Handler does not define event_types: ${handler.constructor.name}`);
         continue;
       }
 
-      for (const event_type of [handler.event_type]) {
+      for (const event_type of handler.event_types) {
         if (!this.handlers[event_type]) {
           this.handlers[event_type] = [];
         }
