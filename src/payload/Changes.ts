@@ -1,4 +1,5 @@
 import { Label } from "./Label";
+import { DateTime } from "./types";
 
 type PreviousAndCurrent<T> = {
   previous: T;
@@ -18,12 +19,12 @@ type MergeStatus =
 export interface Changes {
   description?: PreviousAndCurrent<string>;
   labels?: PreviousAndCurrent<Label[]>;
-  last_edited_at?: PreviousAndCurrent<string>;
+  last_edited_at?: PreviousAndCurrent<DateTime>;
   last_edited_by_id?: PreviousAndCurrent<number>;
   merge_status?: PreviousAndCurrent<MergeStatus>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
   title?: PreviousAndCurrent<string>;
-  updated_at?: PreviousAndCurrent<string>;
+  updated_at?: PreviousAndCurrent<DateTime>;
   updated_by_id?: PreviousAndCurrent<number>;
 }

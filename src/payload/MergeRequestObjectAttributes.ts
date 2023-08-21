@@ -1,6 +1,7 @@
 import { Project } from "./Project";
 import { Author } from "./Author";
 import { ObjectAttributes } from "./ObjectAttributes";
+import { DateTime } from "./types";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
   head_pipeline_id: number | null;
@@ -22,7 +23,7 @@ export interface MergeRequestObjectAttributes extends ObjectAttributes {
     id: string;
     message: string;
     title: string;
-    timestamp: string;
+    timestamp: DateTime;
     url: string;
     author: Author;
   };
