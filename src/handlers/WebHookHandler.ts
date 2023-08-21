@@ -20,17 +20,6 @@ export class WebHookHandler {
       return;
     }
 
-    const {
-      event_type,
-      object_kind,
-      user,
-    } = event.payload;
-    const {
-      name: user_name,
-      username: user_handle,
-    } = user || {};
-
-    this.logger.debug(`Received ${event_type || object_kind} event ${event_uuid} by @${user_handle} (${user_name})`);
     this.queue.put(event);
   }
 }
