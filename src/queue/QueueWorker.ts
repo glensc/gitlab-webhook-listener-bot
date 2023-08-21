@@ -29,18 +29,18 @@ export class QueueWorker {
     }
   }
 
-  private async handle({ payload }: Event) {
+  private async handle(event: Event) {
     const {
       event_type,
       object_kind,
-    } = payload;
+    } = event.payload;
 
     for (const handler of this.handlers.getHandlersByEventType(event_type || object_kind)) {
       try {
-        if (!handler.isValid(payload)) {
+        if (!handler.isValid(event)) {
           continue;
         }
-        await handler.handle(payload);
+        await handler.handle(event);
       } catch (e: any) {
         this.logger.error(`Handler ${handler.constructor.name} crashed: ${e.message}`);
       }

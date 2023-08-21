@@ -1,7 +1,7 @@
-import { MergeRequestHandler, MergeRequestPayload } from "../../src";
+import { Event, MergeRequestHandler, MergeRequestPayload } from "../../src";
 
 export class RenovateRebase extends MergeRequestHandler {
-  public async handle(payload: MergeRequestPayload): Promise<void> {
+  public async handle(event: Event<MergeRequestPayload>): Promise<void> {
     this.logger.debug("Renovate bot wants rebase");
     // TODO: create pipeline
     // code here to do the actual action
@@ -12,7 +12,7 @@ export class RenovateRebase extends MergeRequestHandler {
    * and branch is renovate branch
    * and rebase checkbox is checked.
    */
-  public isValid(payload: MergeRequestPayload): boolean {
+  public isValid({ payload }: Event<MergeRequestPayload>): boolean {
     const {
       object_attributes: {
         source_branch,

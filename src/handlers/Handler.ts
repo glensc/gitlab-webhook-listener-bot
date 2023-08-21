@@ -1,7 +1,7 @@
-import { Payload } from "../payload";
+import { Event } from "../types";
 
 export interface Handler {
   event_type: string;
-  isValid(payload: Payload): boolean;
-  handle(payload: Payload): Promise<void>;
+  isValid(event: Event): boolean;
+  handle(event: Event): Promise<void>;
 }
