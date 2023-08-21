@@ -1,5 +1,5 @@
-import { BaseHandler } from "./BaseHandler";
-import { Handler } from "./Handler";
+import { BaseHandler } from "../core/BaseHandler";
+import { Handler } from "../core/Handler";
 import { MergeRequestPayload } from "../payload";
 import { Event, EVENT_TYPES } from "../types";
 

@@ -1,4 +1,4 @@
-import { WebHookHandler } from "../handlers/WebHookHandler";
+import { WebHookHandler } from "../core/WebHookHandler";
 import logger from "./logger";
 import queue from "./queue";
 
