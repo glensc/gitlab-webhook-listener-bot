@@ -1,6 +1,6 @@
 import { Request } from "express";
 
-export type Event = {
+export type Event<P = any> = {
   headers: Request["headers"];
-  payload: Request["body"];
+  payload: P;
 }
