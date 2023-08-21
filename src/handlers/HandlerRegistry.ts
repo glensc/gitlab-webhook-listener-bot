@@ -1,5 +1,6 @@
 import { Handler } from "./Handler";
 import { LoggerInterface } from "../services/logger";
+import { EVENT_TYPES } from "../types";
 
 export class HandlerRegistry {
   private handlers: Record<string, Handler[]> = {};
@@ -10,7 +11,10 @@ export class HandlerRegistry {
   }
 
   public getHandlersByEventType(event_type: string) {
-      return Object.values(this.handlers[event_type] || []);
+    return new Set([
+      this.handlers[event_type] || [],
+      this.handlers[EVENT_TYPES.ANY] || [],
+    ].flat());
   }
 
   public addHandlers(handlers: Handler[]): void {
