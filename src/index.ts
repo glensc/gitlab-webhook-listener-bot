@@ -6,6 +6,7 @@ export { default as logger } from "./services/logger";
 export type { Handler } from "./handlers/Handler"
 export type { LoggerInterface } from "./services/logger";
 export * from "./payload";
+export { Event } from "./types";
 
 export { BaseHandler } from "./handlers/BaseHandler";
 export { MergeRequestHandler } from "./handlers/MergeRequestHandler";
