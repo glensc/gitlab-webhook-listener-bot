@@ -8,7 +8,7 @@ const port = 3000;
 const prefix = "/";
 const url = new URL(`http://localhost:${port}${prefix}`);
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: "5mb" }));
 app.use(prefix, routes);
 app.set("prefix", prefix);
 app.set("port", port);
