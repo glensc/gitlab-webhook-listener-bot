@@ -9,4 +9,5 @@ export enum EVENT_TYPES {
   ANY = "any",
   DEPLOYMENT = "deployment",
   MERGE_REQUEST = "merge_request",
+  PIPELINE = "pipeline",
 }
