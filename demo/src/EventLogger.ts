@@ -1,8 +1,6 @@
-import { BaseHandler, Event, Handler } from "../../src";
-import { EVENT_TYPES } from "../../src/types";
+import { BaseHandler, Event } from "../../src";
 
-export class EventLogger extends BaseHandler implements Handler {
-  public event_types = [EVENT_TYPES.ANY];
+export class EventLogger extends BaseHandler {
   public async handle(event: Event): Promise<void> {
     const {
       headers: {
