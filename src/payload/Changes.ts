@@ -17,6 +17,7 @@ type MergeStatus =
   "cannot_be_merged";
 
 export interface Changes {
+  closed_at?: PreviousAndCurrent<DateTime>;
   description?: PreviousAndCurrent<string>;
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<DateTime>;
