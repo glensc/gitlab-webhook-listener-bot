@@ -2,6 +2,7 @@ import { Project } from "./Project";
 import { Author } from "./Author";
 import { ObjectAttributes } from "./ObjectAttributes";
 import { DateTime } from "./types";
+import { Commit } from "./Commit";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
   head_pipeline_id: number | null;
@@ -19,14 +20,7 @@ export interface MergeRequestObjectAttributes extends ObjectAttributes {
   target_project_id: number;
   source: Project;
   target: Project;
-  last_commit: {
-    id: string;
-    message: string;
-    title: string;
-    timestamp: DateTime;
-    url: string;
-    author: Author;
-  };
+  last_commit: Commit;
   work_in_progress: boolean;
   reviewer_ids: number[] | null;
   blocking_discussions_resolved: boolean;
