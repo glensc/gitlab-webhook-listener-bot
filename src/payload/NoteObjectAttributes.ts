@@ -22,7 +22,7 @@ export interface NoteObjectAttributes {
   system: boolean;
   type?: null;
   updated_at: DateTime;
-  updated_by_id?: null;
+  updated_by_id: number | null;
   description: string;
   url: string;
 }
