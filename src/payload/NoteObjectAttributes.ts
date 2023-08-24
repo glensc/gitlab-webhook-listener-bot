@@ -1,9 +1,11 @@
+import { ChangePosition } from "./ChangePosition";
 import { DateTime } from "./types";
+import { Position } from "./Position";
 
 export interface NoteObjectAttributes {
   attachment?: null;
   author_id: number;
-  change_position?: null;
+  change_position: ChangePosition | null;
   commit_id?: null;
   created_at: string;
   discussion_id: string;
@@ -12,8 +14,8 @@ export interface NoteObjectAttributes {
   note: string;
   noteable_id: number;
   noteable_type: "MergeRequest" | "Commit" | "Issue" | "Snippet";
-  original_position?: null;
-  position?: null;
+  original_position: Position | null;
+  position: Position | null;
   project_id: number;
   resolved_at: DateTime | null;
   resolved_by_id?: null;
