@@ -20,7 +20,7 @@ export interface NoteObjectAttributes {
   resolved_by_push?: null;
   st_diff?: null;
   system: boolean;
-  type?: null;
+  type: "DiscussionNote" | string | null;
   updated_at: DateTime;
   updated_by_id: number | null;
   description: string;
