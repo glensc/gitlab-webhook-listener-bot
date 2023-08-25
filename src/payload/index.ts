@@ -1,3 +1,4 @@
+export { DateTime } from "./types";
 export { DeploymentPayload } from "./DeploymentPayload";
 export { IssuePayload } from "./IssuePayload";
 export { JobPayload } from "./JobPayload";
