@@ -1,4 +1,4 @@
 import { HandlerRegistry } from "../core/HandlerRegistry";
-import logger from "./logger";
+import registry from "./registry";
 
-export default new HandlerRegistry(logger);
+export default new HandlerRegistry(registry);
