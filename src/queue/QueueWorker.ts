@@ -3,6 +3,7 @@ import { Queue } from "./Queue";
 import { LoggerInterface } from "../services/logger";
 import { Event } from "../types";
 import { HandlerRegistry } from "../core/HandlerRegistry";
+import { Registry } from "../core/Registry";
 
 export class QueueWorker {
   private readonly interval = 1000;
@@ -10,8 +11,12 @@ export class QueueWorker {
   public constructor(
     private readonly queue: Queue,
     private readonly handlers: HandlerRegistry,
-    private readonly logger: LoggerInterface,
+    private readonly registry: Registry,
   ) {
+  }
+
+  private get logger(): LoggerInterface {
+    return this.registry.logger;
   }
 
   public start() {
