@@ -1,11 +1,10 @@
-import { ChangePosition } from "./ChangePosition";
 import { DateTime } from "../types";
 import { Position } from "./Position";
 
 export interface NoteObjectAttributes {
   attachment?: null;
   author_id: number;
-  change_position: ChangePosition | null;
+  change_position: Position | null;
   commit_id?: null;
   created_at: string;
   discussion_id: string;
