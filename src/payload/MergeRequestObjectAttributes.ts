@@ -10,6 +10,11 @@ export interface MergeRequestObjectAttributes extends ObjectAttributes {
   merge_error: string | null;
   merge_params: {
     force_remove_source_branch: "1" | true;
+    auto_merge_strategy?: string;
+    should_remove_source_branch?: boolean;
+    commit_message?: string;
+    squash_commit_message?: string;
+    sha?: string;
   };
   merge_status: string;
   merge_user_id: string | null;
