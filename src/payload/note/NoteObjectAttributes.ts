@@ -1,5 +1,5 @@
 import { ChangePosition } from "./ChangePosition";
-import { DateTime } from "./types";
+import { DateTime } from "../types";
 import { Position } from "./Position";
 
 export interface NoteObjectAttributes {

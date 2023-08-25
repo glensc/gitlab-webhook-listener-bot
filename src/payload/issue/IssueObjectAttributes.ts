@@ -1,5 +1,5 @@
-import { ObjectAttributes } from "./ObjectAttributes";
-import { DateTime } from "./types";
+import { ObjectAttributes } from "../ObjectAttributes";
+import { DateTime } from "../types";
 
 export interface IssueObjectAttributes extends ObjectAttributes {
   closed_at: DateTime;
