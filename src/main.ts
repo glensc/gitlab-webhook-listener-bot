@@ -4,6 +4,7 @@ import { Handler } from "./core/Handler";
 import { urlPath } from "./urlPath";
 import handlerRegister from "./services/handlers";
 import worker from "./services/worker";
+import registry from "./services/registry";
 
 type Options = {
   handlers?: Handler[],
@@ -14,6 +15,8 @@ export const main = ({
                        logger,
                        handlers,
                      }: Options): void => {
+
+  registry.logger = logger;
 
   if (handlers) {
     handlerRegister.addHandlers(handlers);

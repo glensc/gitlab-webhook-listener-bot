@@ -1,6 +1,6 @@
 import { QueueWorker } from "../queue/QueueWorker";
 import queue from "./queue";
 import handlers from "./handlers";
-import logger from "./logger";
+import registry from "./registry";
 
-export default new QueueWorker(queue, handlers, logger);
+export default new QueueWorker(queue, handlers, registry);

@@ -1,13 +1,18 @@
 import { Handler } from "./Handler";
 import { LoggerInterface } from "../services/logger";
 import { EVENT_TYPES } from "../types";
+import { Registry } from "./Registry";
 
 export class HandlerRegistry {
   private handlers: Record<string, Handler[]> = {};
 
   public constructor(
-    private readonly logger: LoggerInterface,
+    private readonly registry: Registry,
   ) {
+  }
+
+  private get logger(): LoggerInterface {
+    return this.registry.logger;
   }
 
   public getHandlersByEventType(event_type: string) {
