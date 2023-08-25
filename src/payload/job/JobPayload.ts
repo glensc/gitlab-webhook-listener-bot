@@ -1,9 +1,9 @@
-import { Commit } from "./Commit";
-import { DateTime } from "./types";
-import { Environment } from "./Environment";
-import { Repository } from "./Repository";
-import { Runner } from "./Runner";
-import { User } from "./User";
+import { Commit } from "../Commit";
+import { DateTime } from "../types";
+import { Environment } from "../Environment";
+import { Repository } from "../Repository";
+import { Runner } from "../Runner";
+import { User } from "../User";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#job-events
 export interface JobPayload {

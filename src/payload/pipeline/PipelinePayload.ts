@@ -1,8 +1,8 @@
 import { Builds } from "./Builds";
-import { Commit } from "./Commit";
+import { Commit } from "../Commit";
 import { PipelineObjectAttributes } from "./PipelineObjectAttributes";
-import { Project } from "./Project";
-import { User } from "./User";
+import { Project } from "../Project";
+import { User } from "../User";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#pipeline-events
 export interface PipelinePayload {

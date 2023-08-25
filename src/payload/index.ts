@@ -1,8 +1,8 @@
 export { DateTime } from "./types";
-export { DeploymentPayload } from "./DeploymentPayload";
-export { IssuePayload } from "./IssuePayload";
-export { JobPayload } from "./JobPayload";
-export { MergeRequestPayload } from "./MergeRequestPayload";
-export { NotePayload } from "./NotePayload";
+export { DeploymentPayload } from "./deployment/DeploymentPayload";
+export { IssuePayload } from "./issue/IssuePayload";
+export { JobPayload } from "./job/JobPayload";
+export { MergeRequestPayload } from "./merge_request/MergeRequestPayload";
+export { NotePayload } from "./note/NotePayload";
 export { Payload } from "./Payload";
-export { PipelinePayload } from "./PipelinePayload";
+export { PipelinePayload } from "./pipeline/PipelinePayload";
