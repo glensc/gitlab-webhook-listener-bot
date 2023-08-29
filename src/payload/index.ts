@@ -7,3 +7,4 @@ export { NotePayload } from "./note/NotePayload";
 export { Payload } from "./Payload";
 export { PipelinePayload } from "./pipeline/PipelinePayload";
 export { ProjectCreatePayload } from "./project/ProjectCreatePayload";
+export { ProjectRenamePayload } from "./project/ProjectRenamePayload";
