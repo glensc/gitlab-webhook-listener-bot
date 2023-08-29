@@ -5,11 +5,13 @@ export class EventLogger extends BaseHandler {
     const {
       headers: {
         "x-gitlab-event-uuid": event_uuid,
+        "x-gitlab-event": event_title,
         "content-length": content_length,
       },
       payload: {
         event_type,
         object_kind,
+        event_name,
         user,
       },
     } = event;
@@ -19,7 +21,7 @@ export class EventLogger extends BaseHandler {
       username: user_handle,
     } = user || {};
 
-    this.logger.debug(`Received ${content_length} bytes: ${event_type || object_kind} event ${event_uuid} by @${user_handle} (${user_name})`);
+    this.logger.debug(`Received ${content_length} bytes: ${event_title}: ${event_type || object_kind || event_name} event ${event_uuid} by @${user_handle} (${user_name})`);
   }
 
   public isValid(): boolean {
