@@ -6,3 +6,4 @@ export { MergeRequestPayload } from "./merge_request/MergeRequestPayload";
 export { NotePayload } from "./note/NotePayload";
 export { Payload } from "./Payload";
 export { PipelinePayload } from "./pipeline/PipelinePayload";
+export { ProjectCreatePayload } from "./project/ProjectCreatePayload";
