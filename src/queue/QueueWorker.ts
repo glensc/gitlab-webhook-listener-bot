@@ -38,9 +38,10 @@ export class QueueWorker {
     const {
       event_type,
       object_kind,
+      event_name,
     } = event.payload;
 
-    for (const handler of this.handlers.getHandlersByEventType(event_type || object_kind)) {
+    for (const handler of this.handlers.getHandlersByEventType(event_type || object_kind || event_name)) {
       try {
         if (!handler.isValid(event)) {
           continue;
