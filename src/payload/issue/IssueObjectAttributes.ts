@@ -9,7 +9,7 @@ export interface IssueObjectAttributes extends ObjectAttributes {
   moved_to_id: number | null;
   duplicated_to_id: number | null;
   project_id: number;
-  relative_position: number;
+  relative_position: number | null;
   weight: number | null;
   severity: string;
   health_status: string | null;
