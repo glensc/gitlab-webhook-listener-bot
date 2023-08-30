@@ -23,6 +23,7 @@ export interface Changes {
   last_edited_at?: PreviousAndCurrent<DateTime>;
   last_edited_by_id?: PreviousAndCurrent<number>;
   merge_status?: PreviousAndCurrent<MergeStatus>;
+  severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
   title?: PreviousAndCurrent<string>;
