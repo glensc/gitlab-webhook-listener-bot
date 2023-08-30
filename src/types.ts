@@ -8,6 +8,7 @@ export type Event<P = any> = {
 export enum EVENT_TYPES {
   ANY = "any",
   DEPLOYMENT = "deployment",
+  ISSUE = "issue",
   JOB = "build",
   MERGE_REQUEST = "merge_request",
   NOTE = "note",
