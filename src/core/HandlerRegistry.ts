@@ -17,8 +17,8 @@ export class HandlerRegistry {
 
   public getHandlersByEventType(event_type: string) {
     return new Set([
-      this.handlers[event_type] || [],
       this.handlers[EVENT_TYPES.ANY] || [],
+      this.handlers[event_type] || [],
     ].flat());
   }
 
