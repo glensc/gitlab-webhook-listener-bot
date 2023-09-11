@@ -31,4 +31,5 @@ export interface MergeRequestObjectAttributes extends ObjectAttributes {
   blocking_discussions_resolved: boolean;
   first_contribution: boolean;
   detailed_merge_status: string;
+  oldrev?: string;
 }
