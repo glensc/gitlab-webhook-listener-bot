@@ -38,6 +38,7 @@ export default async ({ body: payload, headers: incoming_headers }: Request, res
     res.send("ok\n");
   } catch (e: any) {
     registry.logger.error(e.message);
+    res.status(500);
     res.send("err\n");
   }
 };
