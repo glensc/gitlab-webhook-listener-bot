@@ -12,16 +12,14 @@ export class EventLogger extends BaseHandler {
         event_type,
         object_kind,
         event_name,
-        user,
+        user_name,
+        user_username,
       },
     } = event;
 
-    const {
-      name: user_name,
-      username: user_handle,
-    } = user || {};
+    const user = event.payload.user || {};
 
-    this.logger.debug(`Received ${content_length} bytes: ${event_title}: ${event_type || object_kind || event_name} event ${event_uuid} by @${user_handle} (${user_name})`);
+    this.logger.debug(`Received ${content_length} bytes: ${event_title}: ${event_type || object_kind || event_name} event ${event_uuid} by @${user_username || user.username} (${user_name || user.name})`);
   }
 
   public isValid(): boolean {
