@@ -1,5 +1,14 @@
 import { Request } from "express";
 
+// https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#delivery-headers
+type Headers = Request["headers"] & {
+  "user-agent": string;
+  "x-gitlab-event": string;
+  "x-gitlab-event-uuid": string;
+  "x-gitlab-instance": string;
+  "x-gitlab-webhook-uuid": string;
+};
+
 export type Event<P = any> = {
   headers: Request["headers"];
   payload: P;
