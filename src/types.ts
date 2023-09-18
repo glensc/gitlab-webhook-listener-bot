@@ -10,7 +10,7 @@ type Headers = Request["headers"] & {
 };
 
 export type Event<P = any> = {
-  headers: Request["headers"];
+  headers: Headers;
   payload: P;
 }
 
