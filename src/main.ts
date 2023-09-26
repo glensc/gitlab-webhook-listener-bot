@@ -11,10 +11,11 @@ type Options = {
   logger: LoggerInterface,
 };
 
-export const main = ({
-                       logger,
-                       handlers,
-                     }: Options): void => {
+export const main = (options: Options): void => {
+  const {
+    logger,
+    handlers,
+  } = options;
 
   registry.logger = logger;
 
