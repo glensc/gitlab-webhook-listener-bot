@@ -3,6 +3,8 @@ import { ProbeHandler } from "../types";
 
 interface RegistryInterface {
   logger: LoggerInterface;
+  livenessProbe: ProbeHandler;
+  readinessProbe: ProbeHandler;
 }
 
 export class Registry {
@@ -22,5 +24,21 @@ export class Registry {
 
   public get logger(): LoggerInterface {
     return this.registry.get("logger");
+  }
+
+  public set livenessProbe(probe: ProbeHandler) {
+    this.registry.set("livenessProbe", probe);
+  }
+
+  public get livenessProbe(): ProbeHandler {
+    return this.registry.get("livenessProbe");
+  }
+
+  public set readinessProbe(probe: ProbeHandler) {
+    this.registry.set("readinessProbe", probe);
+  }
+
+  public get readinessProbe(): ProbeHandler {
+    return this.registry.get("readinessProbe");
   }
 }
