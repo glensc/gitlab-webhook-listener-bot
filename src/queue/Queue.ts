@@ -1,6 +1,6 @@
-import { Event } from "../types";
+import { WebhookEvent } from "../types";
 
-export class Queue<T = Event> {
+export class Queue<T = WebhookEvent> {
   private readonly q: T[] = [];
 
   public put(event: T) {

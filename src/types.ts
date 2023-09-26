@@ -9,7 +9,7 @@ export type Headers = Request["headers"] & {
   "x-gitlab-webhook-uuid": string;
 };
 
-export type Event<P = any> = {
+export type WebhookEvent<P = any> = {
   headers: Headers;
   payload: P;
 }
