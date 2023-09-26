@@ -5,7 +5,7 @@ export { default as logger } from "./services/logger";
 // Reusable classes and types
 export type { Handler } from "./core/Handler"
 export type { LoggerInterface } from "./services/logger";
-export type { Event } from "./types";
+export type { WebhookEvent } from "./types";
 export { EVENT_TYPES } from "./types";
 export { BaseHandler } from "./core/BaseHandler";
 export * from "./payload";

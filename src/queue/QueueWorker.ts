@@ -1,7 +1,7 @@
 import { setTimeout } from "node:timers/promises";
 import { Queue } from "./Queue";
 import { LoggerInterface } from "../services/logger";
-import { Event } from "../types";
+import { WebhookEvent } from "../types";
 import { HandlerRegistry } from "../core/HandlerRegistry";
 import { Registry } from "../core/Registry";
 
@@ -34,7 +34,7 @@ export class QueueWorker {
     }
   }
 
-  private async handle(event: Event) {
+  private async handle(event: WebhookEvent) {
     const {
       event_type,
       object_kind,

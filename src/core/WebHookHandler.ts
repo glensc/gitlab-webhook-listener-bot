@@ -1,5 +1,5 @@
 import { Queue } from "../queue/Queue";
-import { Event } from "../types";
+import { WebhookEvent } from "../types";
 import { LoggerInterface } from "../services/logger";
 import { Registry } from "./Registry";
 
@@ -14,7 +14,7 @@ export class WebHookHandler {
     return this.registry.logger;
   }
 
-  public async handle(event: Event): Promise<void> {
+  public async handle(event: WebhookEvent): Promise<void> {
     this.queue.put(event);
   }
 }
