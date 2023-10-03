@@ -10,10 +10,10 @@ main({
     new ProjectCreateEvent(logger),
     new RenovateRebase(logger),
   ],
-  livenessProbe() {
+  async livenessProbe() {
     logger.debug("Called livenessProbe");
   },
-  readinessProbe() {
+  async readinessProbe() {
     logger.debug("Called readinessProbe");
   },
 });

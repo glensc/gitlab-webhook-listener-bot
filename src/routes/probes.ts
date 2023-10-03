@@ -10,7 +10,7 @@ const router = Router();
 // Restarting a container in such a state can help to make the application more available despite bugs.
 router.get("/liveness", asyncHandler(async (req, res) => {
   try {
-    registry.livenessProbe();
+    await registry.livenessProbe();
     res.status(200).send("ok\n");
   } catch (err) {
     registry.logger.error(err);
@@ -21,7 +21,7 @@ router.get("/liveness", asyncHandler(async (req, res) => {
 // pod is ready to accept traffic
 router.get("/readiness", asyncHandler(async (req, res) => {
   try {
-    registry.readinessProbe();
+    await registry.readinessProbe();
     res.status(200).send("ok\n");
   } catch (err) {
     registry.logger.error(err);
