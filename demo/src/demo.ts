@@ -10,4 +10,10 @@ main({
     new ProjectCreateEvent(logger),
     new RenovateRebase(logger),
   ],
+  livenessProbe() {
+    logger.debug("Called livenessProbe");
+  },
+  readinessProbe() {
+    logger.debug("Called readinessProbe");
+  },
 });

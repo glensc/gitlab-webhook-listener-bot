@@ -14,6 +14,8 @@ export type WebhookEvent<P = any> = {
   payload: P;
 }
 
+export type ProbeHandler = () => void;
+
 export enum EVENT_TYPES {
   ANY = "any",
   DEPLOYMENT = "deployment",

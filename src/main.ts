@@ -5,18 +5,30 @@ import { urlPath } from "./urlPath";
 import handlerRegister from "./services/handlers";
 import worker from "./services/worker";
 import registry from "./services/registry";
+import { ProbeHandler } from "./types";
 
 type Options = {
   handlers?: Handler[],
   logger: LoggerInterface,
+  livenessProbe?: ProbeHandler,
+  readinessProbe?: ProbeHandler,
 };
 
-export const main = ({
-                       logger,
-                       handlers,
-                     }: Options): void => {
+export const main = (options: Options): void => {
+  const {
+    logger,
+    handlers,
+    livenessProbe,
+    readinessProbe,
+  } = options;
 
   registry.logger = logger;
+  if (livenessProbe) {
+    registry.livenessProbe = livenessProbe;
+  }
+  if (readinessProbe) {
+    registry.readinessProbe = readinessProbe;
+  }
 
   if (handlers) {
     handlerRegister.addHandlers(handlers);

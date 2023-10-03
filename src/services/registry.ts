@@ -1,4 +1,10 @@
 import { Registry } from "../core/Registry";
 import logger from "./logger";
 
-export default new Registry(logger);
+const noop = () => {};
+
+export default new Registry({
+  "logger": logger,
+  "livenessProbe": noop,
+  "readinessProbe": noop,
+});
