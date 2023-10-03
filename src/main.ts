@@ -1,7 +1,7 @@
 import server from "./services/httpServer";
 import { LoggerInterface } from "./services/logger";
 import { Handler } from "./core/Handler";
-import { urlPath } from "./urlPath";
+import { urlPath } from "./util/urlPath";
 import handlerRegister from "./services/handlers";
 import worker from "./services/worker";
 import registry from "./services/registry";
