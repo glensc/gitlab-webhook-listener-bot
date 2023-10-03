@@ -1,0 +1,1 @@
+export { urlPath } from "./urlPath"
