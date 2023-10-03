@@ -1,7 +1,5 @@
 import { Project } from "../Project";
-import { Author } from "../Author";
 import { ObjectAttributes } from "../ObjectAttributes";
-import { DateTime } from "../types";
 import { Commit } from "../Commit";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
