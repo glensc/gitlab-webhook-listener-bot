@@ -1,7 +1,8 @@
 import { Registry } from "../core/Registry";
 import logger from "./logger";
+import { Probe } from "../types";
 
-const noop = async (): Promise<void> => {};
+const noop = async (): Probe => {};
 
 export default new Registry({
   "logger": logger,
