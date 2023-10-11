@@ -7,4 +7,12 @@
   "postUpdateOptions": [
     "yarnDedupeHighest",
   ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "npm",
+      ],
+      "rangeStrategy": "bump",
+    },
+  ],
 }
