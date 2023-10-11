@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",
-    "@types/body-parser": "^1.19.2",
+    "@types/body-parser": "^1.19.3",
     "nodemon": "^3.0.1",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6",
