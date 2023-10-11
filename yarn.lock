@@ -112,7 +112,7 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
-"@tsconfig/node18@^18.2.0":
+"@tsconfig/node18@^18.2.2":
   version "18.2.2"
   resolved "https://registry.yarnpkg.com/@tsconfig/node18/-/node18-18.2.2.tgz#81fb16ecff0d400b1cbadbf76713b50f331029ce"
   integrity sha512-d6McJeGsuoRlwWZmVIeE8CUA27lu6jLjvv1JzqmpsytOYYbVi1tHZEnwCNVOXnj4pyLvneZlFlpXUK+X9wBWyw==
