@@ -32,12 +32,12 @@ jobs:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
 
-      - run: yarn set-version
+      - run: pnpm set-version
         env:
           APP_VERSION: ${{ steps.vars.outputs.version }}
 
       - name: Publish
-        run: npm publish --access public
+        run: pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
