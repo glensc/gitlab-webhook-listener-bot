@@ -5,7 +5,7 @@
   ],
   // https://docs.renovatebot.com/configuration-options/#postupdateoptions
   "postUpdateOptions": [
-    "yarnDedupeHighest",
+    "pnpmDedupe",
   ],
   "packageRules": [
     {

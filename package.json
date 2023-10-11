@@ -19,8 +19,8 @@
   "scripts": {
     "build": "tsc",
     "ngrok": "ngrok --config ngrok.yml start app",
-    "prepublishOnly": "set -e; yarn install; yarn build",
-    "set-version": "yarn version --new-version $APP_VERSION --no-git-tag-version",
+    "prepublishOnly": "set -e; pnpm install; pnpm build",
+    "set-version": "pnpm version --new-version $APP_VERSION --no-git-tag-version",
     "start": "nodemon demo/src/demo.ts"
   },
   "engines": {
@@ -31,8 +31,7 @@
     "@types/body-parser": "^1.19.3",
     "nodemon": "^3.0.1",
     "tsx": "^3.13.0",
-    "typescript": "^5.2.2",
-    "yarn-deduplicate": "^6.0.2"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@types/express": "^4.17.19",
