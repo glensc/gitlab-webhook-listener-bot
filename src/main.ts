@@ -12,6 +12,7 @@ type Options = {
   logger: LoggerInterface,
   livenessProbe?: ProbeHandler,
   readinessProbe?: ProbeHandler,
+  shutdownHandler?: ProbeHandler,
 };
 
 export const main = (options: Options): void => {
@@ -20,6 +21,7 @@ export const main = (options: Options): void => {
     handlers,
     livenessProbe,
     readinessProbe,
+    shutdownHandler,
   } = options;
 
   registry.logger = logger;
@@ -28,6 +30,9 @@ export const main = (options: Options): void => {
   }
   if (readinessProbe) {
     registry.readinessProbe = readinessProbe;
+  }
+  if (shutdownHandler) {
+    registry.shutdownHandler = shutdownHandler;
   }
 
   if (handlers) {
@@ -50,8 +55,9 @@ export const main = (options: Options): void => {
 
   process.on("SIGTERM", () => {
     logger.info("SIGTERM signal received: closing HTTP server");
-    app.close(() => {
+    app.close(async() => {
       logger.info("HTTP server closed");
+      await registry.shutdownHandler();
     });
   });
 };
