@@ -32,6 +32,8 @@ jobs:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
 
+      - uses: pnpm/action-setup@v2
+
       - run: pnpm set-version
         env:
           APP_VERSION: ${{ steps.vars.outputs.version }}
