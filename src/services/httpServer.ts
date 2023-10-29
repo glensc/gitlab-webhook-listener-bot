@@ -1,9 +1,9 @@
 import bodyParser from "body-parser";
-import express from "express";
+import express, { Express } from "express";
 
 import routes from "../routes";
 
-const app = express();
+const app: Express = express();
 const port = 3000;
 const prefix = "/";
 const url = new URL(`http://localhost:${port}${prefix}`);

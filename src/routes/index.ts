@@ -3,7 +3,7 @@ import main from "./main";
 import webhook from "./webhook";
 import probes from "./probes";
 
-const router = Router();
+const router: Router = Router();
 
 router.get("/", main);
 router.use("/probes", probes);
