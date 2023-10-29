@@ -12,6 +12,7 @@ type Options = {
   logger: LoggerInterface,
   livenessProbe?: ProbeHandler,
   readinessProbe?: ProbeHandler,
+  shutdownHandler?: ProbeHandler,
 };
 
 export const main = (options: Options): void => {
@@ -20,6 +21,7 @@ export const main = (options: Options): void => {
     handlers,
     livenessProbe,
     readinessProbe,
+    shutdownHandler,
   } = options;
 
   registry.logger = logger;
@@ -28,6 +30,9 @@ export const main = (options: Options): void => {
   }
   if (readinessProbe) {
     registry.readinessProbe = readinessProbe;
+  }
+  if (shutdownHandler) {
+    registry.shutdownHandler = shutdownHandler;
   }
 
   if (handlers) {
@@ -39,7 +44,7 @@ export const main = (options: Options): void => {
 
   const port = server.get("port");
 
-  server.listen(port, () => {
+  const app = server.listen(port, () => {
     const url: URL = server.get("url");
 
     logger.info("🕔 The server is now running at:");
@@ -47,4 +52,17 @@ export const main = (options: Options): void => {
     logger.info(` - ${urlPath(url, "/probes/readiness")}`);
     logger.info(` - ${urlPath(url, "/probes/liveness")}`);
   });
+
+  const exitHandler = (signal: string) => {
+    return () => {
+      logger.info(`${signal} signal received: closing HTTP server`);
+      app.close(async () => {
+        logger.info("HTTP server closed");
+        await registry.shutdownHandler();
+        process.exit();
+      });
+    };
+  };
+  process.on("SIGTERM", exitHandler("SIGTERM"));
+  process.on("SIGINT", exitHandler("SIGINT"));
 };

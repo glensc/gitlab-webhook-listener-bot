@@ -8,4 +8,5 @@ export default new Registry({
   "logger": logger,
   "livenessProbe": noop,
   "readinessProbe": noop,
+  "shutdownHandler": noop,
 });
