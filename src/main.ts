@@ -39,12 +39,19 @@ export const main = (options: Options): void => {
 
   const port = server.get("port");
 
-  server.listen(port, () => {
+  const app = server.listen(port, () => {
     const url: URL = server.get("url");
 
     logger.info("🕔 The server is now running at:");
     logger.info(` - ${url}`);
     logger.info(` - ${urlPath(url, "/probes/readiness")}`);
     logger.info(` - ${urlPath(url, "/probes/liveness")}`);
+  });
+
+  process.on("SIGTERM", () => {
+    logger.info("SIGTERM signal received: closing HTTP server");
+    app.close(() => {
+      logger.info("HTTP server closed");
+    });
   });
 };
