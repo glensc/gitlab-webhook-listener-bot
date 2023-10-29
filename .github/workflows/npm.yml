@@ -27,7 +27,7 @@ jobs:
           echo "version: [$APP_VERSION]"
           echo "version=$APP_VERSION" >> $GITHUB_OUTPUT
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
