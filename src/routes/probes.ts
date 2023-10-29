@@ -2,7 +2,7 @@ import { Router } from "express";
 import registry from "../services/registry";
 import { asyncHandler } from "../util";
 
-const router = Router();
+const router: Router = Router();
 
 // https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 
