@@ -62,4 +62,5 @@ export const main = (options: Options): void => {
     });
   };
   process.on("SIGTERM", exitHandler);
+  process.on("SIGINT", exitHandler);
 };
