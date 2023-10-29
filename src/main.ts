@@ -53,11 +53,13 @@ export const main = (options: Options): void => {
     logger.info(` - ${urlPath(url, "/probes/liveness")}`);
   });
 
-  process.on("SIGTERM", () => {
+  const exitHandler = () => {
     logger.info("SIGTERM signal received: closing HTTP server");
     app.close(async() => {
       logger.info("HTTP server closed");
       await registry.shutdownHandler();
+      process.exit();
     });
-  });
+  };
+  process.on("SIGTERM", exitHandler);
 };
