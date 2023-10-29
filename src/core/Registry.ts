@@ -5,6 +5,7 @@ interface RegistryInterface {
   logger: LoggerInterface;
   livenessProbe: ProbeHandler;
   readinessProbe: ProbeHandler;
+  shutdownHandler: ProbeHandler;
 }
 
 export class Registry {
@@ -40,5 +41,13 @@ export class Registry {
 
   public get readinessProbe(): ProbeHandler {
     return this.registry.get("readinessProbe");
+  }
+
+  public set shutdownHandler(handler: ProbeHandler) {
+    this.registry.set("shutdownHandler", handler);
+  }
+
+  public get shutdownHandler(): ProbeHandler {
+    return this.registry.get("shutdownHandler");
   }
 }
