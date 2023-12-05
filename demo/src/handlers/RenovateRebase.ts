@@ -1,4 +1,4 @@
-import { WebhookEvent, MergeRequestHandler, MergeRequestPayload } from "../../src";
+import { WebhookEvent, MergeRequestHandler, MergeRequestPayload } from "../../../src";
 
 export class RenovateRebase extends MergeRequestHandler {
   public async handle(event: WebhookEvent<MergeRequestPayload>): Promise<void> {

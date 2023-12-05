@@ -1,4 +1,4 @@
-import { BaseHandler, WebhookEvent, EVENT_TYPES, ProjectCreatePayload } from "../../src";
+import { BaseHandler, WebhookEvent, EVENT_TYPES, ProjectCreatePayload } from "../../../src";
 
 export class ProjectCreateEvent extends BaseHandler {
   public event_types = [EVENT_TYPES.PROJECT_CREATE];
