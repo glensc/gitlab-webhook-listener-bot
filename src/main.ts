@@ -13,6 +13,8 @@ type Options = {
   livenessProbe?: ProbeHandler,
   readinessProbe?: ProbeHandler,
   shutdownHandler?: ProbeHandler,
+  port?: number,
+  prefix?: string,
 };
 
 export const main = (options: Options): void => {
