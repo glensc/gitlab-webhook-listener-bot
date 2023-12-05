@@ -56,6 +56,11 @@ main({
 });
 ```
 
+## Demo
+
+There's standalone project that you can copy and start your own project from it:
+- [demo/](demo)
+
 ## Similar projects
 
 - https://github.com/kolomiichenko/gitlab-webhooker - write callbacks as handlers. unmaintained.

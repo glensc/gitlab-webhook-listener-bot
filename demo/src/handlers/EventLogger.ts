@@ -1,4 +1,4 @@
-import { BaseHandler, WebhookEvent } from "../../../src";
+import { BaseHandler, WebhookEvent } from "gitlab-webhook-listener-bot";
 
 export class EventLogger extends BaseHandler {
   public async handle(event: WebhookEvent): Promise<void> {

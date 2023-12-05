@@ -1,4 +1,15 @@
 {
   "private": true,
-  "main": "src/demo.ts"
+  "main": "src/demo.ts",
+  "scripts": {
+    "start": "nodemon src/demo.ts"
+  },
+  "dependencies": {
+    "gitlab-webhook-listener-bot": "file:.."
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "nodemon": "^3.0.2",
+    "tsx": "^4.6.2"
+  }
 }
