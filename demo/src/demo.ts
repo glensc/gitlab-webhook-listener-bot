@@ -1,4 +1,4 @@
-import { logger, main } from "../../src";
+import { logger, main } from "gitlab-webhook-listener-bot";
 import { RenovateRebase } from "./handlers/RenovateRebase";
 import { EventLogger } from "./handlers/EventLogger";
 import { ProjectCreateEvent } from "./handlers/ProjectCreateEvent";
