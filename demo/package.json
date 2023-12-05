@@ -1,4 +1,7 @@
 {
   "private": true,
-  "main": "src/demo.ts"
+  "main": "src/demo.ts",
+  "dependencies": {
+    "gitlab-webhook-listener-bot": "file:.."
+  }
 }
