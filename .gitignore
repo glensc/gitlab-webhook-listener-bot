@@ -1,5 +1,6 @@
 *.sw[op]
 *~
+/.envrc.local
 /.eslintcache
 /.idea/
 /coverage/
