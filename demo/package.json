@@ -1,6 +1,9 @@
 {
   "private": true,
   "main": "src/demo.ts",
+  "scripts": {
+    "start": "nodemon src/demo.ts"
+  },
   "dependencies": {
     "gitlab-webhook-listener-bot": "file:.."
   },
