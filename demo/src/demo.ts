@@ -1,7 +1,7 @@
 import { logger, main } from "../../src";
-import { RenovateRebase } from "./RenovateRebase";
-import { EventLogger } from "./EventLogger";
-import { ProjectCreateEvent } from "./ProjectCreateEvent";
+import { RenovateRebase } from "./handlers/RenovateRebase";
+import { EventLogger } from "./handlers/EventLogger";
+import { ProjectCreateEvent } from "./handlers/ProjectCreateEvent";
 
 main({
   logger,
