@@ -1,4 +1,4 @@
-import server from "./services/httpServer";
+import serverBuilder from "./services/httpServer";
 import { LoggerInterface } from "./services/logger";
 import { Handler } from "./core/Handler";
 import { urlPath } from "./util";
@@ -13,6 +13,8 @@ type Options = {
   livenessProbe?: ProbeHandler,
   readinessProbe?: ProbeHandler,
   shutdownHandler?: ProbeHandler,
+  port?: number,
+  prefix?: string,
 };
 
 export const main = (options: Options): void => {
@@ -22,6 +24,8 @@ export const main = (options: Options): void => {
     livenessProbe,
     readinessProbe,
     shutdownHandler,
+    port = 3000,
+    prefix = "/",
   } = options;
 
   registry.logger = logger;
@@ -40,9 +44,8 @@ export const main = (options: Options): void => {
     worker.start();
   }
 
+  const server = serverBuilder(port, prefix);
   logger.info("🕞 Starting webserver");
-
-  const port = server.get("port");
 
   const app = server.listen(port, () => {
     const url: URL = server.get("url");

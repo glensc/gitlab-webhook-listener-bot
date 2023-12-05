@@ -3,15 +3,20 @@ import express, { Express } from "express";
 
 import routes from "../routes";
 
-const app: Express = express();
-const port = 3000;
-const prefix = "/";
-const url = new URL(`http://localhost:${port}${prefix}`);
+const build = (
+  port = 3000,
+  prefix = "/",
+) => {
+  const app: Express = express();
+  const url = new URL(`http://localhost:${port}${prefix}`);
 
-app.use(bodyParser.json({ limit: "5mb" }));
-app.use(prefix, routes);
-app.set("prefix", prefix);
-app.set("port", port);
-app.set("url", url);
+  app.use(bodyParser.json({ limit: "5mb" }));
+  app.use(prefix, routes);
+  app.set("prefix", prefix);
+  app.set("port", port);
+  app.set("url", url);
 
-export default app;
+  return app;
+};
+
+export default build;
