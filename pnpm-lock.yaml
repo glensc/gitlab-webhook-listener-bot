@@ -56,7 +56,7 @@ packages:
     resolution: {integrity: sha512-OaJ7XLaelTgrvlZD8/aa0vvvxZdUmlCn6MtWeB7TkiKW70BQLc9XEPpDLPdbo52ZhXUCrznlWdCHWxJWtdyajA==}
     dependencies:
       '@types/node': 18.19.6
-      '@types/qs': 6.9.10
+      '@types/qs': 6.9.11
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
     dev: false
@@ -66,7 +66,7 @@ packages:
     dependencies:
       '@types/body-parser': 1.19.5
       '@types/express-serve-static-core': 4.17.41
-      '@types/qs': 6.9.10
+      '@types/qs': 6.9.11
       '@types/serve-static': 1.15.5
     dev: false
 
@@ -87,8 +87,8 @@ packages:
     dependencies:
       undici-types: 5.26.5
 
-  /@types/qs@6.9.10:
-    resolution: {integrity: sha512-3Gnx08Ns1sEoCrWssEgTSJs/rsT2vhGP+Ja9cnnk9k4ALxinORlQneLXFeFKOTJMOeZUFD1s7w+w2AphTpvzZw==}
+  /@types/qs@6.9.11:
+    resolution: {integrity: sha512-oGk0gmhnEJK4Yyk+oI7EfXsLayXatCWPHary1MtcmbAifkobT9cM9yutG/hZKIseOU0MqbIwQ/u2nn/Gb+ltuQ==}
     dev: false
 
   /@types/range-parser@1.2.7:
@@ -533,7 +533,7 @@ packages:
   /pino-abstract-transport@1.1.0:
     resolution: {integrity: sha512-lsleG3/2a/JIWUtf9Q5gUNErBqwIu1tUKTT3dUzaf5DySw9ra1wcqKjJjLX1VTY64Wk1eEOYsVGSaGfCK85ekA==}
     dependencies:
-      readable-stream: 4.4.2
+      readable-stream: 4.5.2
       split2: 4.2.0
     dev: false
 
@@ -551,9 +551,9 @@ packages:
       on-exit-leak-free: 2.1.2
       pino-abstract-transport: 1.1.0
       pump: 3.0.0
-      readable-stream: 4.4.2
+      readable-stream: 4.5.2
       secure-json-parse: 2.7.0
-      sonic-boom: 3.7.0
+      sonic-boom: 3.8.0
       strip-json-comments: 3.1.1
     dev: false
 
@@ -574,7 +574,7 @@ packages:
       quick-format-unescaped: 4.0.4
       real-require: 0.2.0
       safe-stable-stringify: 2.4.3
-      sonic-boom: 3.7.0
+      sonic-boom: 3.8.0
       thread-stream: 2.4.1
     dev: false
 
@@ -638,8 +638,8 @@ packages:
       unpipe: 1.0.0
     dev: false
 
-  /readable-stream@4.4.2:
-    resolution: {integrity: sha512-Lk/fICSyIhodxy1IDK2HazkeGjSmezAWX2egdtJnYhtzKEsBPJowlI6F6LPb5tqIQILrMbx22S5o3GuJavPusA==}
+  /readable-stream@4.5.2:
+    resolution: {integrity: sha512-yjavECdqeZ3GLXNgRXgeQEdz9fvDDkNKyHnbHRFtOr7/LcfgBcmct7t/ET+HaCTqfh06OzoAxrkN/IfjJBVe+g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       abort-controller: 3.0.0
@@ -726,8 +726,8 @@ packages:
       object-inspect: 1.13.1
     dev: false
 
-  /sonic-boom@3.7.0:
-    resolution: {integrity: sha512-IudtNvSqA/ObjN97tfgNmOKyDOs4dNcg4cUUsHDebqsgb8wGBBwb31LIgShNO8fye0dFI52X1+tFoKKI6Rq1Gg==}
+  /sonic-boom@3.8.0:
+    resolution: {integrity: sha512-ybz6OYOUjoQQCQ/i4LU8kaToD8ACtYP+Cj5qd2AO36bwbdewxWJ3ArmJ2cr6AvxlL2o0PqnCcPGUgkILbfkaCA==}
     dependencies:
       atomic-sleep: 1.0.0
     dev: false
