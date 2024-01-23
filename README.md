@@ -66,3 +66,4 @@ There's standalone project that you can copy and start your own project from it:
 - https://github.com/kolomiichenko/gitlab-webhooker - write callbacks as handlers. unmaintained.
 - https://github.com/nanoy42/gitlab-webhook-telegram - sends events to telegram.
 - https://github.com/glensc/gitlab-registry-cleanup-hook - deletes related docker images on merge
+- https://gidgetlab.readthedocs.io - a similar project providing a Python framework for GitLab API and webhooks
