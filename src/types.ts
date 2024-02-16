@@ -20,6 +20,7 @@ export type ProbeHandler = () => Probe;
 export enum EVENT_TYPES {
   ANY = "any",
   DEPLOYMENT = "deployment",
+  FEATURE_FLAG = "feature_flag",
   ISSUE = "issue",
   JOB = "build",
   MERGE_REQUEST = "merge_request",
