@@ -32,4 +32,12 @@ export class GitlabClient {
 
     return repositories.filter(repository => repository.name === name)[0];
   }
+
+  async removeRegistryRepositoryById(projectId: ProjectId, repositoryId: number) {
+    const code = await this.api.ContainerRegistry.removeRepository(projectId, repositoryId);
+
+    if ((code as any as number) !== 202) {
+      throw new Error(`Unexpected code: ${code}`);
+    }
+  }
 }
