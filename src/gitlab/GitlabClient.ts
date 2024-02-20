@@ -14,4 +14,22 @@ export class GitlabClient {
       token,
     });
   }
+
+  async getRegistryRepositoryByName(projectId: ProjectId, name: string) {
+    // NOTE: There doesn't appear to be a method that would not involve fetching all repositories
+    let repositories;
+
+    try {
+      repositories = await this.api.ContainerRegistry.allRepositories({ projectId });
+    } catch (e: any) {
+      // forbidden in case feature not enabled
+      if (e.cause.description === "403 Forbidden") {
+        return null;
+      }
+
+      throw e;
+    }
+
+    return repositories.filter(repository => repository.name === name)[0];
+  }
 }
