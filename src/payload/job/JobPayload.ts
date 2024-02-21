@@ -18,9 +18,9 @@ export interface JobPayload extends Payload {
   build_name: string;
   build_stage: string;
   build_status: string;
-  build_created_at: string;
-  build_started_at: string;
-  build_finished_at: string;
+  build_created_at: DateTime;
+  build_started_at: DateTime;
+  build_finished_at: DateTime;
   build_duration: number;
   build_queued_duration: number;
   build_allow_failure: boolean;
