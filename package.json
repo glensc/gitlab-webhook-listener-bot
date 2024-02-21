@@ -21,7 +21,7 @@
     "ngrok": "ngrok --config ngrok.yml start app",
     "prepublishOnly": "set -e; pnpm install; pnpm build",
     "set-version": "pnpm version --new-version $APP_VERSION --no-git-tag-version",
-    "start": "pnpm build; cd demo; pnpm install; pnpm start"
+    "start": "set -e; pnpm build; cd demo; pnpm install; pnpm start"
   },
   "engines": {
     "node": ">=18"
