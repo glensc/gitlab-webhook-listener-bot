@@ -30,7 +30,7 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "@types/body-parser": "^1.19.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "dependencies": {
     "@gitbeaker/rest": "^39.34.3",
