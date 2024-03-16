@@ -4,6 +4,7 @@ import { Commit } from "../Commit";
 import { MergeStatus } from "./types";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
+  draft: boolean;
   head_pipeline_id: number | null;
   merge_commit_sha: string | null;
   merge_error: string | null;
