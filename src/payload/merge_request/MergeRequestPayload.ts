@@ -16,5 +16,5 @@ export interface MergeRequestPayload extends Payload {
   changes: Changes;
   repository: Repository;
   assignees: User[] | null;
-  reviewers: User[] | null;
+  reviewers?: User[];
 }
