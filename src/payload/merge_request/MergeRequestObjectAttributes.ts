@@ -1,6 +1,7 @@
 import { Project } from "../Project";
 import { ObjectAttributes } from "../ObjectAttributes";
 import { Commit } from "../Commit";
+import { MergeStatus } from "./types";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
   head_pipeline_id: number | null;
@@ -14,7 +15,7 @@ export interface MergeRequestObjectAttributes extends ObjectAttributes {
     squash_commit_message?: string;
     sha?: string;
   };
-  merge_status: string;
+  merge_status: MergeStatus;
   merge_user_id: string | null;
   merge_when_pipeline_succeeds: boolean;
   source_branch: string;
