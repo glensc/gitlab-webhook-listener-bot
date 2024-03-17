@@ -15,7 +15,7 @@ export interface ObjectAttributes {
   updated_at: DateTime;
   updated_by_id: number | null;
   title: string;
-  description: string;
+  description: string | null;
   url: string;
   labels: Label[] | null;
   milestone_id: number | null;
