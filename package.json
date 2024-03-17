@@ -18,7 +18,7 @@
   },
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "set -e; tsc -p tsconfig.main.json; tsc",
     "clean": "rm -rf dist node_modules demo/node_modules",
     "ngrok": "ngrok --config ngrok.yml start app",
     "prebuild": "set -e; cd demo; pnpm install",
