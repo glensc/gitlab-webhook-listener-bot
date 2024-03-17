@@ -11,7 +11,7 @@ type PreviousAndCurrent<T> = {
 export interface Changes {
   assignees?: PreviousAndCurrent<User[]>;
   closed_at?: PreviousAndCurrent<DateTime>;
-  description?: PreviousAndCurrent<string>;
+  description?: PreviousAndCurrent<string | null>;
   draft?: PreviousAndCurrent<boolean>;
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<DateTime | null>;
