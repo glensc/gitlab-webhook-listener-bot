@@ -7,13 +7,15 @@ import {
   RenovateRebase,
 } from "./handlers";
 
+const gitlabClient = new GitlabClient(process.env.GITLAB_URL || "", process.env.GITLAB_TOKEN || "");
+
 main({
   logger,
   handlers: [
     new EventLogger(logger),
     new ProjectCreateEvent(logger),
     new RenovateRebase(logger),
-    new RegistryCleanup(new GitlabClient(process.env.GITLAB_URL || "", process.env.GITLAB_TOKEN || ""), logger),
+    new RegistryCleanup(gitlabClient, logger),
   ],
   async livenessProbe() {
     logger.debug("Called livenessProbe");
