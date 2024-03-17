@@ -14,7 +14,7 @@ import type {
  */
 export class MergeRequestClose extends MergeRequestHandler {
   public constructor(
-    private readonly gitlab: GitlabClient,
+    protected readonly gitlab: GitlabClient,
     logger: LoggerInterface,
   ) {
     super(logger);

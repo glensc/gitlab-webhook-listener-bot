@@ -15,7 +15,7 @@ import type {
  */
 export class RegistryCleanup extends MergeRequestHandler {
   public constructor(
-    private readonly gitlab: GitlabClient,
+    protected readonly gitlab: GitlabClient,
     logger: LoggerInterface,
   ) {
     super(logger);
