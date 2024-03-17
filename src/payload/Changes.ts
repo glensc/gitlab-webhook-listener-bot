@@ -12,7 +12,7 @@ export interface Changes {
   description?: PreviousAndCurrent<string>;
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<DateTime | null>;
-  last_edited_by_id?: PreviousAndCurrent<number>;
+  last_edited_by_id?: PreviousAndCurrent<number | null>;
   merge_error?: PreviousAndCurrent<string>;
   merge_params?: PreviousAndCurrent<MergeParams>;
   merge_status?: PreviousAndCurrent<MergeStatus>;
