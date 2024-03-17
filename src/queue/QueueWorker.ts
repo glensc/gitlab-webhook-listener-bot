@@ -21,7 +21,9 @@ export class QueueWorker {
   }
 
   public start() {
-    setImmediate(() => this.run());
+    setImmediate(() => {
+      this.run();
+    });
   }
 
   public async run() {
