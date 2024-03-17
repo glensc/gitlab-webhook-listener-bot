@@ -7,7 +7,7 @@ import type {
   GitlabClient,
   LoggerInterface,
   MergeRequestPayload,
-  WebhookEvent
+  WebhookEvent,
 } from "gitlab-webhook-listener-bot";
 
 /**
