@@ -21,5 +21,5 @@ export interface Changes {
   target_branch?: PreviousAndCurrent<string>;
   title?: PreviousAndCurrent<string>;
   updated_at?: PreviousAndCurrent<DateTime>;
-  updated_by_id?: PreviousAndCurrent<number>;
+  updated_by_id?: PreviousAndCurrent<number | null>;
 }
