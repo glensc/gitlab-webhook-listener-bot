@@ -36,6 +36,7 @@ export interface Changes {
   target_branch?: PreviousAndCurrent<string>;
   time_estimate?: PreviousAndCurrent<number | null>;
   title?: PreviousAndCurrent<string | null>;
+  total_time_spent?: PreviousAndCurrent<number>;
   updated_at?: PreviousAndCurrent<DateTime | null>;
   updated_by_id?: PreviousAndCurrent<number | null>;
   weight?: PreviousAndCurrent<number | null>;
