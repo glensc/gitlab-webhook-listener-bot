@@ -18,11 +18,12 @@
   },
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "set -e; tsc -p tsconfig.main.json; (cd demo && pnpm install); tsc",
+    "clean": "rm -rf dist node_modules demo/node_modules",
     "ngrok": "ngrok --config ngrok.yml start app",
     "prepublishOnly": "set -e; pnpm install; pnpm build --incremental false",
     "set-version": "pnpm version --new-version $APP_VERSION --no-git-tag-version",
-    "start": "set -e; pnpm build; cd demo; pnpm install; pnpm start"
+    "start": "set -e; pnpm build; cd demo; pnpm start"
   },
   "engines": {
     "node": ">=18"
