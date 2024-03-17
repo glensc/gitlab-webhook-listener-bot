@@ -37,7 +37,7 @@ export class HandlerRegistry {
         }
 
         this.logger.debug(`Register "${event_type}" handler: ${handler.constructor.name}`);
-        this.handlers[event_type].push(handler)
+        this.handlers[event_type].push(handler);
       }
     }
   }

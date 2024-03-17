@@ -26,12 +26,12 @@ const validate_headers = (headers: Request["headers"]): Headers => {
   }
 
   return headers as Headers;
-}
+};
 
 // Listener for GitLab WebHooks
 export default async ({ body: payload, headers: incoming_headers }: Request, res: Response) => {
   try {
-    const headers = validate_headers(incoming_headers)
+    const headers = validate_headers(incoming_headers);
 
     await webhook.handle({
       headers,

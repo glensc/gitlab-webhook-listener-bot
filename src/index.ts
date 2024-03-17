@@ -3,7 +3,7 @@ export { main } from "./main";
 export { default as logger } from "./services/logger";
 
 // Reusable classes and types
-export type { Handler } from "./core/Handler"
+export type { Handler } from "./core/Handler";
 export type { LoggerInterface } from "./services/logger";
 export type { WebhookEvent, Probe } from "./types";
 export { EVENT_TYPES } from "./types";

@@ -12,7 +12,7 @@ export type Headers = Request["headers"] & {
 export type WebhookEvent<P = any> = {
   headers: Headers;
   payload: P;
-}
+};
 
 export type Probe = Promise<void>;
 

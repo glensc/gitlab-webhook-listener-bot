@@ -1,3 +1,3 @@
-export { asyncHandler } from "./asyncHandler"
+export { asyncHandler } from "./asyncHandler";
 
-export { urlPath } from "./urlPath"
+export { urlPath } from "./urlPath";
