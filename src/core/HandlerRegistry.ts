@@ -1,7 +1,8 @@
-import { Handler } from "./Handler";
-import { LoggerInterface } from "../services/logger";
 import { EVENT_TYPES } from "../types";
-import { Registry } from "./Registry";
+
+import type { Handler } from "./Handler";
+import type { Registry } from "./Registry";
+import type { LoggerInterface } from "../services/logger";
 
 export class HandlerRegistry {
   private handlers: Record<string, Handler[]> = {};
@@ -26,6 +27,7 @@ export class HandlerRegistry {
     for (const handler of handlers) {
       if (!handler.event_types) {
         this.logger.error(`Handler does not define event_types: ${handler.constructor.name}`);
+
         continue;
       }
 
@@ -35,7 +37,7 @@ export class HandlerRegistry {
         }
 
         this.logger.debug(`Register "${event_type}" handler: ${handler.constructor.name}`);
-        this.handlers[event_type].push(handler)
+        this.handlers[event_type].push(handler);
       }
     }
   }

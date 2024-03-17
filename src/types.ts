@@ -1,4 +1,4 @@
-import { Request } from "express";
+import type { Request } from "express";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#delivery-headers
 export type Headers = Request["headers"] & {
@@ -12,9 +12,10 @@ export type Headers = Request["headers"] & {
 export type WebhookEvent<P = any> = {
   headers: Headers;
   payload: P;
-}
+};
 
 export type Probe = Promise<void>;
+
 export type ProbeHandler = () => Probe;
 
 export enum EVENT_TYPES {

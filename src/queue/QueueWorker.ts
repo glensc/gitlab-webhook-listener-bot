@@ -1,9 +1,10 @@
 import { setTimeout } from "node:timers/promises";
-import { Queue } from "./Queue";
-import { LoggerInterface } from "../services/logger";
-import { WebhookEvent } from "../types";
-import { HandlerRegistry } from "../core/HandlerRegistry";
-import { Registry } from "../core/Registry";
+
+import type { Queue } from "./Queue";
+import type { HandlerRegistry } from "../core/HandlerRegistry";
+import type { Registry } from "../core/Registry";
+import type { LoggerInterface } from "../services/logger";
+import type { WebhookEvent } from "../types";
 
 export class QueueWorker {
   private readonly interval = 1000;
@@ -27,6 +28,7 @@ export class QueueWorker {
     while (true) {
       if (this.queue.size()) {
         const event = this.queue.get();
+
         await this.handle(event);
       }
 
@@ -46,6 +48,7 @@ export class QueueWorker {
         if (!handler.isValid(event)) {
           continue;
         }
+
         await handler.handle(event);
       } catch (e: any) {
         this.logger.error(`Handler ${handler.constructor.name} crashed: ${e.message}`);

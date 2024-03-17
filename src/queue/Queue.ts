@@ -1,4 +1,4 @@
-import { WebhookEvent } from "../types";
+import type { WebhookEvent } from "../types";
 
 export class Queue<T = WebhookEvent> {
   private readonly q: T[] = [];
@@ -9,6 +9,7 @@ export class Queue<T = WebhookEvent> {
 
   public get() {
     const event = this.q.shift();
+
     if (event === undefined) {
       throw new Error("Queue is empty");
     }

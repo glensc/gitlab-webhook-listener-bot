@@ -1,7 +1,7 @@
-import { DateTime } from "./types";
-import { Label } from "./Label";
-import { MergeParams, MergeStatus } from "./merge_request/types";
-import { User } from "./User";
+import type { Label } from "./Label";
+import type { MergeParams, MergeStatus } from "./merge_request/types";
+import type { DateTime } from "./types";
+import type { User } from "./User";
 
 type PreviousAndCurrent<T> = {
   previous: T;

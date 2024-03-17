@@ -1,4 +1,4 @@
-import { ProjectPayload } from "./ProjectPayload";
+import type { ProjectPayload } from "./ProjectPayload";
 
 export interface ProjectCreatePayload extends ProjectPayload {
   event_name: "project_create";

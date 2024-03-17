@@ -1,5 +1,5 @@
-import { LoggerInterface } from "../services/logger";
-import { ProbeHandler } from "../types";
+import type { LoggerInterface } from "../services/logger";
+import type { ProbeHandler } from "../types";
 
 interface RegistryInterface {
   logger: LoggerInterface;

@@ -1,5 +1,5 @@
-import { DateTime } from "../types";
-import { Variables } from "./Variables";
+import type { Variables } from "./Variables";
+import type { DateTime } from "../types";
 
 export interface PipelineObjectAttributes {
   id: number;

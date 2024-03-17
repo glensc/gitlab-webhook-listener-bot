@@ -1,10 +1,10 @@
-import { Commit } from "../Commit";
-import { DateTime } from "../types";
-import { Environment } from "../Environment";
-import { Payload } from "../Payload";
-import { Repository } from "../Repository";
-import { Runner } from "../Runner";
-import { User } from "../User";
+import type { Commit } from "../Commit";
+import type { Environment } from "../Environment";
+import type { Payload } from "../Payload";
+import type { Repository } from "../Repository";
+import type { Runner } from "../Runner";
+import type { DateTime } from "../types";
+import type { User } from "../User";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#job-events
 export interface JobPayload extends Payload {

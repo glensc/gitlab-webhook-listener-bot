@@ -1,20 +1,21 @@
-import serverBuilder from "./services/httpServer";
-import { LoggerInterface } from "./services/logger";
-import { Handler } from "./core/Handler";
-import { urlPath } from "./util";
 import handlerRegister from "./services/handlers";
-import worker from "./services/worker";
+import serverBuilder from "./services/httpServer";
 import registry from "./services/registry";
-import { ProbeHandler } from "./types";
+import worker from "./services/worker";
+import { urlPath } from "./util";
+
+import type { Handler } from "./core/Handler";
+import type { LoggerInterface } from "./services/logger";
+import type { ProbeHandler } from "./types";
 
 type Options = {
-  handlers?: Handler[],
-  logger: LoggerInterface,
-  livenessProbe?: ProbeHandler,
-  readinessProbe?: ProbeHandler,
-  shutdownHandler?: ProbeHandler,
-  port?: number,
-  prefix?: string,
+  handlers?: Handler[];
+  logger: LoggerInterface;
+  livenessProbe?: ProbeHandler;
+  readinessProbe?: ProbeHandler;
+  shutdownHandler?: ProbeHandler;
+  port?: number;
+  prefix?: string;
 };
 
 export const main = (options: Options): void => {
@@ -29,12 +30,15 @@ export const main = (options: Options): void => {
   } = options;
 
   registry.logger = logger;
+
   if (livenessProbe) {
     registry.livenessProbe = livenessProbe;
   }
+
   if (readinessProbe) {
     registry.readinessProbe = readinessProbe;
   }
+
   if (shutdownHandler) {
     registry.shutdownHandler = shutdownHandler;
   }
@@ -45,6 +49,7 @@ export const main = (options: Options): void => {
   }
 
   const server = serverBuilder(port, prefix);
+
   logger.info("🕞 Starting webserver");
 
   const app = server.listen(port, () => {
@@ -66,6 +71,7 @@ export const main = (options: Options): void => {
       });
     };
   };
+
   process.on("SIGTERM", exitHandler("SIGTERM"));
   process.on("SIGINT", exitHandler("SIGINT"));
 };

@@ -1,9 +1,9 @@
-import { Builds } from "./Builds";
-import { Commit } from "../Commit";
-import { Payload } from "../Payload";
-import { PipelineObjectAttributes } from "./PipelineObjectAttributes";
-import { Project } from "../Project";
-import { User } from "../User";
+import type { Builds } from "./Builds";
+import type { PipelineObjectAttributes } from "./PipelineObjectAttributes";
+import type { Commit } from "../Commit";
+import type { Payload } from "../Payload";
+import type { Project } from "../Project";
+import type { User } from "../User";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#pipeline-events
 export interface PipelinePayload extends Payload {
@@ -15,8 +15,8 @@ export interface PipelinePayload extends Payload {
   commit: Commit;
   builds: Builds[] | null;
   source_pipeline?: {
-    project: Pick<Project, "id" | "web_url" | "path_with_namespace">,
+    project: Pick<Project, "id" | "web_url" | "path_with_namespace">;
     job_id: number;
     pipeline_id: number;
-  }
+  };
 }

@@ -1,4 +1,4 @@
-import { WebhookEvent, EVENT_TYPES } from "../types";
+import type { WebhookEvent, EVENT_TYPES } from "../types";
 
 export interface Handler {
   event_types: EVENT_TYPES[];

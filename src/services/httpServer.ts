@@ -1,7 +1,9 @@
 import bodyParser from "body-parser";
-import express, { Express } from "express";
+import express from "express";
 
 import routes from "../routes";
+
+import type { Express } from "express";
 
 const build = (
   port = 3000,

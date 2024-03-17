@@ -1,5 +1,5 @@
-import { DateTime } from "../types";
-import { Author } from "../Author";
+import type { Author } from "../Author";
+import type { DateTime } from "../types";
 
 export interface ProjectPayload {
   event_name: string;

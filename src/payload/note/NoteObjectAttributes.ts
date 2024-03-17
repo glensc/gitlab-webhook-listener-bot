@@ -1,5 +1,5 @@
-import { DateTime } from "../types";
-import { Position } from "./Position";
+import type { Position } from "./Position";
+import type { DateTime } from "../types";
 
 export interface NoteObjectAttributes {
   attachment?: null;
