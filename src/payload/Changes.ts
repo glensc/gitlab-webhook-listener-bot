@@ -34,4 +34,5 @@ export interface Changes {
   title?: PreviousAndCurrent<string | null>;
   updated_at?: PreviousAndCurrent<DateTime | null>;
   updated_by_id?: PreviousAndCurrent<number | null>;
+  weight?: PreviousAndCurrent<number | null>;
 }
