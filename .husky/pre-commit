@@ -1,0 +1,9 @@
+# Setup nice colorful prompt
+# Use color "lime": https://tintin.mudhalla.net/info/256color/
+c='\033[38;5;070m'
+r='\033[0m'
+PS4="${c}⦿${r} "
+
+echo "Running pre-commit hooks"
+set -x
+node_modules/.bin/lint-staged -c .lintstagedrc.json
