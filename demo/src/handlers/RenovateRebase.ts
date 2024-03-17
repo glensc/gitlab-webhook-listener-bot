@@ -28,8 +28,14 @@ export class RenovateRebase extends MergeRequestHandler {
     );
   }
 
-  public async handle(event: WebhookEvent<MergeRequestPayload>): Promise<void> {
-    this.logger.debug("Renovate bot wants rebase");
+  public async handle({ payload }: WebhookEvent<MergeRequestPayload>): Promise<void> {
+    const {
+      object_attributes: {
+        url,
+      },
+    } = payload;
+
+    this.logger.debug(`Renovate rebase request triggered from ${url}`);
     // TODO: create pipeline
     // code here to do the actual action
   }
