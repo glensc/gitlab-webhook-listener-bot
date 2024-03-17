@@ -16,6 +16,7 @@ export interface Changes {
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<DateTime | null>;
   last_edited_by_id?: PreviousAndCurrent<number | null>;
+  merge_commit_sha?: PreviousAndCurrent<string | null>;
   merge_error?: PreviousAndCurrent<string>;
   merge_params?: PreviousAndCurrent<MergeParams>;
   merge_status?: PreviousAndCurrent<MergeStatus>;
