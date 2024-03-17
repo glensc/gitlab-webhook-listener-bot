@@ -18,7 +18,7 @@ export interface NoteObjectAttributes {
   project_id: number;
   resolved_at: DateTime | null;
   resolved_by_id?: number | null;
-  resolved_by_push?: null;
+  resolved_by_push?: false | null;
   st_diff?: null;
   system: boolean;
   type: "DiscussionNote" | string | null;
