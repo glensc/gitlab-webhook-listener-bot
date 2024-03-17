@@ -26,7 +26,7 @@ export class RegistryCleanup extends MergeRequestHandler {
     } = payload;
 
     return (
-      ["close", "merge"].includes(action)
+      ["close", "merge"].includes(action || "")
     );
   }
 
