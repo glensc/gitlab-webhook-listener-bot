@@ -25,7 +25,7 @@ export interface Changes {
   merge_user_id?: PreviousAndCurrent<number | null>;
   merge_when_pipeline_succeeds?: PreviousAndCurrent<boolean>;
   milestone_id?: PreviousAndCurrent<number | null>;
-  relative_position?: PreviousAndCurrent<number>;
+  relative_position?: PreviousAndCurrent<number | null>;
   reviewers?: PreviousAndCurrent<User[]>;
   severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
