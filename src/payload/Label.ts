@@ -11,4 +11,5 @@ export interface Label {
   description: string | null;
   type: "GroupLabel" | "ProjectLabel",
   group_id: number | null,
+  lock_on_merge: boolean,
 }
