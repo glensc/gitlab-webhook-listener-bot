@@ -64,10 +64,10 @@ export const main = (options: Options): void => {
   const exitHandler = (signal: string) => {
     return () => {
       logger.info(`${signal} signal received: closing HTTP server`);
-      app.close(async () => {
+      app.close(() => {
         logger.info("HTTP server closed");
-        await registry.shutdownHandler();
-        process.exit();
+        registry.shutdownHandler()
+          .then(() => process.exit());
       });
     };
   };
