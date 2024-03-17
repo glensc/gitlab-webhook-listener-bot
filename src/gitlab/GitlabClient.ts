@@ -1,6 +1,5 @@
 import { Gitlab } from "@gitbeaker/rest";
-
-type ProjectId = string | number;
+import { ProjectId } from "./types";
 
 export class GitlabClient {
   protected readonly api: InstanceType<typeof Gitlab<false>>;
