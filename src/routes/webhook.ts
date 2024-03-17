@@ -32,6 +32,7 @@ const validate_headers = (headers: Request["headers"]): Headers => {
 export default async ({ body: payload, headers: incoming_headers }: Request, res: Response) => {
   try {
     const headers = validate_headers(incoming_headers)
+
     await webhook.handle({
       headers,
       payload,

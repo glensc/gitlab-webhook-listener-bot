@@ -9,6 +9,7 @@ export class Queue<T = WebhookEvent> {
 
   public get() {
     const event = this.q.shift();
+
     if (event === undefined) {
       throw new Error("Queue is empty");
     }

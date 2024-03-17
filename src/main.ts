@@ -29,12 +29,15 @@ export const main = (options: Options): void => {
   } = options;
 
   registry.logger = logger;
+
   if (livenessProbe) {
     registry.livenessProbe = livenessProbe;
   }
+
   if (readinessProbe) {
     registry.readinessProbe = readinessProbe;
   }
+
   if (shutdownHandler) {
     registry.shutdownHandler = shutdownHandler;
   }
@@ -45,6 +48,7 @@ export const main = (options: Options): void => {
   }
 
   const server = serverBuilder(port, prefix);
+
   logger.info("🕞 Starting webserver");
 
   const app = server.listen(port, () => {
@@ -66,6 +70,7 @@ export const main = (options: Options): void => {
       });
     };
   };
+
   process.on("SIGTERM", exitHandler("SIGTERM"));
   process.on("SIGINT", exitHandler("SIGINT"));
 };

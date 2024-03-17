@@ -27,6 +27,7 @@ export class HandlerRegistry {
     for (const handler of handlers) {
       if (!handler.event_types) {
         this.logger.error(`Handler does not define event_types: ${handler.constructor.name}`);
+
         continue;
       }
 

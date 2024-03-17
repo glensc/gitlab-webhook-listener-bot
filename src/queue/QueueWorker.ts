@@ -29,6 +29,7 @@ export class QueueWorker {
     while (true) {
       if (this.queue.size()) {
         const event = this.queue.get();
+
         await this.handle(event);
       }
 
@@ -48,6 +49,7 @@ export class QueueWorker {
         if (!handler.isValid(event)) {
           continue;
         }
+
         await handler.handle(event);
       } catch (e: any) {
         this.logger.error(`Handler ${handler.constructor.name} crashed: ${e.message}`);
