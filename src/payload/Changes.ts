@@ -17,6 +17,7 @@ export interface Changes {
   description?: PreviousAndCurrent<string | null>;
   draft?: PreviousAndCurrent<boolean>;
   due_date?: PreviousAndCurrent<string | null>;
+  escalation_status?: PreviousAndCurrent<string>;
   id?: PreviousAndCurrent<number | null>;
   iid?: PreviousAndCurrent<number | null>;
   labels?: PreviousAndCurrent<Label[]>;
