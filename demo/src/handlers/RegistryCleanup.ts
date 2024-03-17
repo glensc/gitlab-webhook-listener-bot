@@ -1,10 +1,13 @@
 import {
+  MergeRequestHandler,
+  slugify,
+} from "gitlab-webhook-listener-bot";
+
+import type {
   GitlabClient,
   LoggerInterface,
-  MergeRequestHandler,
   MergeRequestPayload,
-  WebhookEvent,
-  slugify,
+  WebhookEvent
 } from "gitlab-webhook-listener-bot";
 
 /**

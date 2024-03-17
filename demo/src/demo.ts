@@ -1,8 +1,9 @@
 import { logger, main, GitlabClient } from "gitlab-webhook-listener-bot";
-import { RenovateRebase } from "./handlers/RenovateRebase";
+
 import { EventLogger } from "./handlers/EventLogger";
 import { ProjectCreateEvent } from "./handlers/ProjectCreateEvent";
 import { RegistryCleanup } from "./handlers/RegistryCleanup";
+import { RenovateRebase } from "./handlers/RenovateRebase";
 
 main({
   logger,

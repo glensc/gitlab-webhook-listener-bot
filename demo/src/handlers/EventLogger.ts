@@ -1,4 +1,6 @@
-import { BaseHandler, WebhookEvent } from "gitlab-webhook-listener-bot";
+import { BaseHandler } from "gitlab-webhook-listener-bot";
+
+import type { WebhookEvent } from "gitlab-webhook-listener-bot";
 
 export class EventLogger extends BaseHandler {
   public isValid(): boolean {
