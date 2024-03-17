@@ -1,3 +1,4 @@
+import { Commit } from "../Commit";
 import { IssueObjectAttributes } from "../issue/IssueObjectAttributes";
 import { MergeRequestObjectAttributes } from "../merge_request/MergeRequestObjectAttributes";
 import { NoteObjectAttributes } from "./NoteObjectAttributes";
@@ -15,11 +16,13 @@ export interface NotePayload extends Payload {
   project: Project;
   object_attributes: NoteObjectAttributes;
   repository: Repository;
+
+  // Optional types by relation
   merge_request?: Omit<MergeRequestObjectAttributes, "action">;
   issue?: Omit<IssueObjectAttributes, "action"> & {
     health_status: string | null;
   };
+  commit?: Commit;
   //  TODO:
-  // commit
   // snippet
 }

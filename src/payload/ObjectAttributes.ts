@@ -6,7 +6,7 @@ export interface ObjectAttributes {
   iid: number;
   state: string;
   state_id: number;
-  action: string;
+  action?: string;
   created_at: DateTime;
   author_id: number;
   assignee_id: number | null;

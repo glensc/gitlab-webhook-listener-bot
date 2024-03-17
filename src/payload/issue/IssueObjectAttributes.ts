@@ -4,7 +4,7 @@ import { DateTime } from "../types";
 export interface IssueObjectAttributes extends ObjectAttributes {
   closed_at: DateTime | null;
   confidential: boolean;
-  discussion_locked: true | null;
+  discussion_locked: boolean | null;
   due_date: string | null;
   moved_to_id: number | null;
   duplicated_to_id: number | null;

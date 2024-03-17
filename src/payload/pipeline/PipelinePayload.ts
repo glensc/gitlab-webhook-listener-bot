@@ -9,10 +9,14 @@ import { User } from "../User";
 export interface PipelinePayload extends Payload {
   object_kind: "pipeline";
   object_attributes: PipelineObjectAttributes;
-  // TODO merge_request
-  merge_request: any | null;
+  merge_request: null;
   user: User;
   project: Omit<Project, "homepage" | "url" | "ssh_url" | "http_url">;
   commit: Commit;
   builds: Builds[] | null;
+  source_pipeline?: {
+    project: Pick<Project, "id" | "web_url" | "path_with_namespace">,
+    job_id: number;
+    pipeline_id: number;
+  }
 }

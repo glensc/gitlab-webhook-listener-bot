@@ -12,10 +12,12 @@ export interface Changes {
   assignees?: PreviousAndCurrent<User[]>;
   author_id?: PreviousAndCurrent<number | null>;
   closed_at?: PreviousAndCurrent<DateTime | null>;
+  confidential?: PreviousAndCurrent<boolean>;
   created_at?: PreviousAndCurrent<string | null>;
   description?: PreviousAndCurrent<string | null>;
   draft?: PreviousAndCurrent<boolean>;
   due_date?: PreviousAndCurrent<string | null>;
+  escalation_status?: PreviousAndCurrent<string>;
   id?: PreviousAndCurrent<number | null>;
   iid?: PreviousAndCurrent<number | null>;
   labels?: PreviousAndCurrent<Label[]>;
@@ -34,6 +36,7 @@ export interface Changes {
   severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
+  time_change?: PreviousAndCurrent<number>;
   time_estimate?: PreviousAndCurrent<number | null>;
   title?: PreviousAndCurrent<string | null>;
   total_time_spent?: PreviousAndCurrent<number>;
