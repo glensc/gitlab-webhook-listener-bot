@@ -58,6 +58,7 @@ export const main = (options: Options): void => {
     logger.info("🕔 The server is now running at:");
     logger.info(` - GET ${url}`);
     logger.info(` - POST ${url}`);
+    logger.info(` - POST ${urlPath(url, "/webhook")} (same as POST /)`);
     logger.info(` - GET ${urlPath(url, "/probes/readiness")}`);
     logger.info(` - GET ${urlPath(url, "/probes/liveness")}`);
   });
