@@ -12,6 +12,7 @@ export interface Changes {
   assignees?: PreviousAndCurrent<User[]>;
   author_id?: PreviousAndCurrent<number | null>;
   closed_at?: PreviousAndCurrent<DateTime | null>;
+  confidential?: PreviousAndCurrent<boolean>;
   created_at?: PreviousAndCurrent<string | null>;
   description?: PreviousAndCurrent<string | null>;
   draft?: PreviousAndCurrent<boolean>;
