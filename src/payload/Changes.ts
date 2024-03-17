@@ -10,6 +10,7 @@ type PreviousAndCurrent<T> = {
 
 export interface Changes {
   assignees?: PreviousAndCurrent<User[]>;
+  author_id?: PreviousAndCurrent<number>;
   closed_at?: PreviousAndCurrent<DateTime | null>;
   description?: PreviousAndCurrent<string | null>;
   draft?: PreviousAndCurrent<boolean>;
