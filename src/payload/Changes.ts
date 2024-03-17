@@ -19,6 +19,7 @@ export interface Changes {
   merge_error?: PreviousAndCurrent<string>;
   merge_params?: PreviousAndCurrent<MergeParams>;
   merge_status?: PreviousAndCurrent<MergeStatus>;
+  merge_user_id?: PreviousAndCurrent<number | null>;
   reviewers?: PreviousAndCurrent<User[]>;
   severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
