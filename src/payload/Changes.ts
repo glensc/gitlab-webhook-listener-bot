@@ -26,7 +26,7 @@ export interface Changes {
   severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
-  time_estimate?: PreviousAndCurrent<number>;
+  time_estimate?: PreviousAndCurrent<number | null>;
   title?: PreviousAndCurrent<string | null>;
   updated_at?: PreviousAndCurrent<DateTime | null>;
   updated_by_id?: PreviousAndCurrent<number | null>;
