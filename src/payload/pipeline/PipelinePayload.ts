@@ -9,8 +9,7 @@ import { User } from "../User";
 export interface PipelinePayload extends Payload {
   object_kind: "pipeline";
   object_attributes: PipelineObjectAttributes;
-  // TODO merge_request
-  merge_request: any | null;
+  merge_request: null;
   user: User;
   project: Omit<Project, "homepage" | "url" | "ssh_url" | "http_url">;
   commit: Commit;
