@@ -1,4 +1,6 @@
-import { BaseHandler, WebhookEvent, EVENT_TYPES, ProjectCreatePayload } from "gitlab-webhook-listener-bot";
+import { BaseHandler, EVENT_TYPES } from "gitlab-webhook-listener-bot";
+
+import type { WebhookEvent, ProjectCreatePayload } from "gitlab-webhook-listener-bot";
 
 export class ProjectCreateEvent extends BaseHandler {
   public event_types = [EVENT_TYPES.PROJECT_CREATE];
@@ -11,6 +13,7 @@ export class ProjectCreateEvent extends BaseHandler {
     const {
       path_with_namespace,
     } = payload;
+
     this.logger.debug(`Project "${path_with_namespace}" created`);
   }
 }
