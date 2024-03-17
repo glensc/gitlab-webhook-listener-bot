@@ -10,7 +10,7 @@ export interface MergeRequestObjectAttributes extends ObjectAttributes {
   merge_error: string | null;
   merge_params: MergeParams;
   merge_status: MergeStatus;
-  merge_user_id: string | null;
+  merge_user_id: number | null;
   merge_when_pipeline_succeeds: boolean;
   source_branch: string;
   source_project_id: number;
