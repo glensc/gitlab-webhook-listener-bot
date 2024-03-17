@@ -15,8 +15,8 @@ export interface PipelinePayload extends Payload {
   commit: Commit;
   builds: Builds[] | null;
   source_pipeline?: {
-    project: Pick<Project, "id" | "web_url" | "path_with_namespace">,
+    project: Pick<Project, "id" | "web_url" | "path_with_namespace">;
     job_id: number;
     pipeline_id: number;
-  }
+  };
 }

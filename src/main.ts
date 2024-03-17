@@ -9,13 +9,13 @@ import type { LoggerInterface } from "./services/logger";
 import type { ProbeHandler } from "./types";
 
 type Options = {
-  handlers?: Handler[],
-  logger: LoggerInterface,
-  livenessProbe?: ProbeHandler,
-  readinessProbe?: ProbeHandler,
-  shutdownHandler?: ProbeHandler,
-  port?: number,
-  prefix?: string,
+  handlers?: Handler[];
+  logger: LoggerInterface;
+  livenessProbe?: ProbeHandler;
+  readinessProbe?: ProbeHandler;
+  shutdownHandler?: ProbeHandler;
+  port?: number;
+  prefix?: string;
 };
 
 export const main = (options: Options): void => {
