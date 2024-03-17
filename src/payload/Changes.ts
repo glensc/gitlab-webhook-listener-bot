@@ -1,6 +1,7 @@
 import { DateTime } from "./types";
 import { Label } from "./Label";
 import { MergeParams, MergeStatus } from "./merge_request/types";
+import { User } from "./User";
 
 type PreviousAndCurrent<T> = {
   previous: T;
@@ -17,6 +18,7 @@ export interface Changes {
   merge_error?: PreviousAndCurrent<string>;
   merge_params?: PreviousAndCurrent<MergeParams>;
   merge_status?: PreviousAndCurrent<MergeStatus>;
+  reviewers?: PreviousAndCurrent<User[]>;
   severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
