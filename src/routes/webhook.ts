@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
-
 import registry from "../services/registry";
 import webhook from "../services/webhook";
-import { Headers } from "../types";
+
+import type { Headers } from "../types";
+import type { Request, Response } from "express";
 
 const required_headers = [
   "user-agent",

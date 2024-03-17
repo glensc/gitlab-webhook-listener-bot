@@ -1,12 +1,11 @@
-import { Commit } from "../Commit";
-import { IssueObjectAttributes } from "../issue/IssueObjectAttributes";
-import { MergeRequestObjectAttributes } from "../merge_request/MergeRequestObjectAttributes";
-import { Payload } from "../Payload";
-import { Project } from "../Project";
-import { Repository } from "../Repository";
-import { User } from "../User";
-
-import { NoteObjectAttributes } from "./NoteObjectAttributes";
+import type { NoteObjectAttributes } from "./NoteObjectAttributes";
+import type { Commit } from "../Commit";
+import type { IssueObjectAttributes } from "../issue/IssueObjectAttributes";
+import type { MergeRequestObjectAttributes } from "../merge_request/MergeRequestObjectAttributes";
+import type { Payload } from "../Payload";
+import type { Project } from "../Project";
+import type { Repository } from "../Repository";
+import type { User } from "../User";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#comment-events
 export interface NotePayload extends Payload {

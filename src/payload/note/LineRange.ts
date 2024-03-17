@@ -1,4 +1,4 @@
-import { LinePosition } from "./LinePosition";
+import type { LinePosition } from "./LinePosition";
 
 export interface LineRange {
   start: LinePosition;

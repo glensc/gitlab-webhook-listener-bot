@@ -1,7 +1,8 @@
-import { LoggerInterface } from "../services/logger";
-import { WebhookEvent, EVENT_TYPES } from "../types";
+import { EVENT_TYPES } from "../types";
 
-import { Handler } from "./Handler";
+import type { Handler } from "./Handler";
+import type { LoggerInterface } from "../services/logger";
+import type { WebhookEvent } from "../types";
 
 export abstract class BaseHandler<P = any> implements Handler {
   public event_types = [EVENT_TYPES.ANY];

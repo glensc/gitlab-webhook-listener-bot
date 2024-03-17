@@ -1,10 +1,9 @@
-import { Commit } from "../Commit";
-import { Payload } from "../Payload";
-import { Project } from "../Project";
-import { User } from "../User";
-
-import { Builds } from "./Builds";
-import { PipelineObjectAttributes } from "./PipelineObjectAttributes";
+import type { Builds } from "./Builds";
+import type { PipelineObjectAttributes } from "./PipelineObjectAttributes";
+import type { Commit } from "../Commit";
+import type { Payload } from "../Payload";
+import type { Project } from "../Project";
+import type { User } from "../User";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#pipeline-events
 export interface PipelinePayload extends Payload {

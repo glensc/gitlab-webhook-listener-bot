@@ -1,9 +1,8 @@
-import { Environment } from "../Environment";
-import { Runner } from "../Runner";
-import { DateTime } from "../types";
-import { User } from "../User";
-
-import { ArtifactsFile } from "./ArtifactsFile";
+import type { ArtifactsFile } from "./ArtifactsFile";
+import type { Environment } from "../Environment";
+import type { Runner } from "../Runner";
+import type { DateTime } from "../types";
+import type { User } from "../User";
 
 export interface Builds {
   id: number;

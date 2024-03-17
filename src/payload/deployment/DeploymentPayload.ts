@@ -1,7 +1,7 @@
-import { Payload } from "../Payload";
-import { Project } from "../Project";
-import { DateTime } from "../types";
-import { User } from "../User";
+import type { Payload } from "../Payload";
+import type { Project } from "../Project";
+import type { DateTime } from "../types";
+import type { User } from "../User";
 
 export interface DeploymentPayload extends Payload {
   object_kind: "deployment";

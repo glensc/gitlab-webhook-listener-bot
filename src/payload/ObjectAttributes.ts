@@ -1,5 +1,5 @@
-import { Label } from "./Label";
-import { DateTime } from "./types";
+import type { Label } from "./Label";
+import type { DateTime } from "./types";
 
 export interface ObjectAttributes {
   id: number;

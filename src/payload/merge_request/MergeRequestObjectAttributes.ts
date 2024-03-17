@@ -1,8 +1,7 @@
-import { Commit } from "../Commit";
-import { ObjectAttributes } from "../ObjectAttributes";
-import { Project } from "../Project";
-
-import { MergeParams, MergeStatus } from "./types";
+import type { MergeParams, MergeStatus } from "./types";
+import type { Commit } from "../Commit";
+import type { ObjectAttributes } from "../ObjectAttributes";
+import type { Project } from "../Project";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
   draft: boolean;

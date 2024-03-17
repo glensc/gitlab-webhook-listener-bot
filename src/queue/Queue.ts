@@ -1,4 +1,4 @@
-import { WebhookEvent } from "../types";
+import type { WebhookEvent } from "../types";
 
 export class Queue<T = WebhookEvent> {
   private readonly q: T[] = [];

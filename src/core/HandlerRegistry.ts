@@ -1,8 +1,8 @@
-import { LoggerInterface } from "../services/logger";
 import { EVENT_TYPES } from "../types";
 
-import { Handler } from "./Handler";
-import { Registry } from "./Registry";
+import type { Handler } from "./Handler";
+import type { Registry } from "./Registry";
+import type { LoggerInterface } from "../services/logger";
 
 export class HandlerRegistry {
   private handlers: Record<string, Handler[]> = {};

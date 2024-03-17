@@ -1,11 +1,10 @@
 import { setTimeout } from "node:timers/promises";
 
-import { HandlerRegistry } from "../core/HandlerRegistry";
-import { Registry } from "../core/Registry";
-import { LoggerInterface } from "../services/logger";
-import { WebhookEvent } from "../types";
-
-import { Queue } from "./Queue";
+import type { Queue } from "./Queue";
+import type { HandlerRegistry } from "../core/HandlerRegistry";
+import type { Registry } from "../core/Registry";
+import type { LoggerInterface } from "../services/logger";
+import type { WebhookEvent } from "../types";
 
 export class QueueWorker {
   private readonly interval = 1000;

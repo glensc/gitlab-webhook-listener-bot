@@ -1,4 +1,4 @@
-import { LineRange } from "./LineRange";
+import type { LineRange } from "./LineRange";
 
 export interface Position {
   base_sha: string | null;

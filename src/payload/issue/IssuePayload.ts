@@ -1,11 +1,10 @@
-import { Changes } from "../Changes";
-import { Label } from "../Label";
-import { Payload } from "../Payload";
-import { Project } from "../Project";
-import { Repository } from "../Repository";
-import { User } from "../User";
-
-import { IssueObjectAttributes } from "./IssueObjectAttributes";
+import type { IssueObjectAttributes } from "./IssueObjectAttributes";
+import type { Changes } from "../Changes";
+import type { Label } from "../Label";
+import type { Payload } from "../Payload";
+import type { Project } from "../Project";
+import type { Repository } from "../Repository";
+import type { User } from "../User";
 
 export interface IssuePayload extends Payload {
   object_kind: "issue";

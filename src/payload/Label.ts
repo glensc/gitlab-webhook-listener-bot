@@ -1,4 +1,4 @@
-import { DateTime } from "./types";
+import type { DateTime } from "./types";
 
 export interface Label {
   id: number;

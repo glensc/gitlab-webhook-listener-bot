@@ -1,4 +1,4 @@
-import { Request } from "express";
+import type { Request } from "express";
 
 // https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#delivery-headers
 export type Headers = Request["headers"] & {
