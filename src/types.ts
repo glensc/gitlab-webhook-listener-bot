@@ -15,6 +15,7 @@ export type WebhookEvent<P = any> = {
 }
 
 export type Probe = Promise<void>;
+
 export type ProbeHandler = () => Probe;
 
 export enum EVENT_TYPES {

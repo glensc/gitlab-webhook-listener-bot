@@ -1,7 +1,8 @@
 import { Router } from "express";
+
 import main from "./main";
-import webhook from "./webhook";
 import probes from "./probes";
+import webhook from "./webhook";
 
 const router: Router = Router();
 

@@ -1,7 +1,8 @@
-import { FeatureFlagObjectAttributes } from "./FeatureFlagObjectAttributes";
 import { Payload } from "../Payload";
 import { Project } from "../Project";
 import { User } from "../User";
+
+import { FeatureFlagObjectAttributes } from "./FeatureFlagObjectAttributes";
 
 export interface FeatureFlagPayload extends Payload {
   project: Project;

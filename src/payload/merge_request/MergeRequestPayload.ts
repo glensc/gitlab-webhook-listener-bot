@@ -1,10 +1,11 @@
 import { Changes } from "../Changes";
 import { Label } from "../Label";
-import { MergeRequestObjectAttributes } from "./MergeRequestObjectAttributes";
+import { Payload } from "../Payload";
 import { Project } from "../Project";
 import { Repository } from "../Repository";
 import { User } from "../User";
-import { Payload } from "../Payload";
+
+import { MergeRequestObjectAttributes } from "./MergeRequestObjectAttributes";
 
 export interface MergeRequestPayload extends Payload {
   object_kind: "merge_request";

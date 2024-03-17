@@ -1,11 +1,11 @@
+import { Handler } from "./core/Handler";
+import handlerRegister from "./services/handlers";
 import serverBuilder from "./services/httpServer";
 import { LoggerInterface } from "./services/logger";
-import { Handler } from "./core/Handler";
-import { urlPath } from "./util";
-import handlerRegister from "./services/handlers";
-import worker from "./services/worker";
 import registry from "./services/registry";
+import worker from "./services/worker";
 import { ProbeHandler } from "./types";
+import { urlPath } from "./util";
 
 type Options = {
   handlers?: Handler[],

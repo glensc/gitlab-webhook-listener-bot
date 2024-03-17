@@ -1,6 +1,7 @@
-import { Project } from "../Project";
-import { ObjectAttributes } from "../ObjectAttributes";
 import { Commit } from "../Commit";
+import { ObjectAttributes } from "../ObjectAttributes";
+import { Project } from "../Project";
+
 import { MergeParams, MergeStatus } from "./types";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {

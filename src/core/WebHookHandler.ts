@@ -1,6 +1,7 @@
 import { Queue } from "../queue/Queue";
-import { WebhookEvent } from "../types";
 import { LoggerInterface } from "../services/logger";
+import { WebhookEvent } from "../types";
+
 import { Registry } from "./Registry";
 
 export class WebHookHandler {

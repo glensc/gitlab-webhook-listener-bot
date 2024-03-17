@@ -1,6 +1,7 @@
-import { Handler } from "./Handler";
 import { LoggerInterface } from "../services/logger";
 import { EVENT_TYPES } from "../types";
+
+import { Handler } from "./Handler";
 import { Registry } from "./Registry";
 
 export class HandlerRegistry {

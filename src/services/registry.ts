@@ -1,6 +1,7 @@
 import { Registry } from "../core/Registry";
-import logger from "./logger";
 import { Probe } from "../types";
+
+import logger from "./logger";
 
 const noop = async (): Probe => {};
 

@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
-import webhook from "../services/webhook";
+
 import registry from "../services/registry";
+import webhook from "../services/webhook";
 import { Headers } from "../types";
 
 const required_headers = [
