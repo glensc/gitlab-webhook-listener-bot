@@ -5,7 +5,7 @@ export interface NoteObjectAttributes {
   attachment?: null;
   author_id: number;
   change_position: Position | null;
-  commit_id?: null;
+  commit_id?: string | null;
   created_at: string;
   discussion_id: string;
   id: number;
