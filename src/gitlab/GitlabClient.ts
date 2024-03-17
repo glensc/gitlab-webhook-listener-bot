@@ -15,7 +15,7 @@ export class GitlabClient {
     });
   }
 
-  async getRegistryRepositoryByName(projectId: ProjectId, name: string) {
+  public async getRegistryRepositoryByName(projectId: ProjectId, name: string) {
     // NOTE: There doesn't appear to be a method that would not involve fetching all repositories
     let repositories;
 
@@ -33,7 +33,7 @@ export class GitlabClient {
     return repositories.filter(repository => repository.name === name)[0];
   }
 
-  async removeRegistryRepositoryById(projectId: ProjectId, repositoryId: number) {
+  public async removeRegistryRepositoryById(projectId: ProjectId, repositoryId: number) {
     const code = await this.api.ContainerRegistry.removeRepository(projectId, repositoryId);
 
     if ((code as any as number) !== 202) {
