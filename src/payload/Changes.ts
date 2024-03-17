@@ -34,6 +34,7 @@ export interface Changes {
   severity?: PreviousAndCurrent<string>;
   state_id?: PreviousAndCurrent<number>;
   target_branch?: PreviousAndCurrent<string>;
+  time_change?: PreviousAndCurrent<number>;
   time_estimate?: PreviousAndCurrent<number | null>;
   title?: PreviousAndCurrent<string | null>;
   total_time_spent?: PreviousAndCurrent<number>;
