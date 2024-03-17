@@ -5,6 +5,7 @@
     "rootDir": ".",
     "outDir": "dist",
     "declaration": true,
+    "incremental": true,
     "sourceMap": true,
     "pretty": true,
     "experimentalDecorators": true,

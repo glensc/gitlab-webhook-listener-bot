@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc",
     "ngrok": "ngrok --config ngrok.yml start app",
-    "prepublishOnly": "set -e; pnpm install; pnpm build",
+    "prepublishOnly": "set -e; pnpm install; pnpm build --incremental false",
     "set-version": "pnpm version --new-version $APP_VERSION --no-git-tag-version",
     "start": "set -e; pnpm build; cd demo; pnpm install; pnpm start"
   },
