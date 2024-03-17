@@ -7,9 +7,12 @@ import probes from "./probes";
 import webhook from "./webhook";
 
 const router: Router = Router();
+const webhookHandler = asyncHandler(webhook);
 
 router.get("/", main);
+router.post("/", webhookHandler);
 router.use("/probes", probes);
-router.post("/webhook", asyncHandler(webhook));
+// @deprecated use "POST /" instead
+router.post("/webhook", webhookHandler);
 
 export default router;
