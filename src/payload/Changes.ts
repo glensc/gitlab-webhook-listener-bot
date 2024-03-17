@@ -11,7 +11,7 @@ export interface Changes {
   closed_at?: PreviousAndCurrent<DateTime>;
   description?: PreviousAndCurrent<string>;
   labels?: PreviousAndCurrent<Label[]>;
-  last_edited_at?: PreviousAndCurrent<DateTime>;
+  last_edited_at?: PreviousAndCurrent<DateTime | null>;
   last_edited_by_id?: PreviousAndCurrent<number>;
   merge_error?: PreviousAndCurrent<string>;
   merge_params?: PreviousAndCurrent<MergeParams>;
