@@ -10,16 +10,17 @@
     "listener",
     "webhook"
   ],
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./dist/index.js"
+    "./demo": "./dist/demo/src",
+    ".": "./dist/src/index.js"
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
     "ngrok": "ngrok --config ngrok.yml start app",
-    "prepublishOnly": "set -e; pnpm install; pnpm build",
+    "prepublishOnly": "set -e; pnpm install; pnpm build --incremental false",
     "set-version": "pnpm version --new-version $APP_VERSION --no-git-tag-version",
     "start": "set -e; pnpm build; cd demo; pnpm install; pnpm start"
   },

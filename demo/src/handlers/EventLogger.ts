@@ -1,6 +1,10 @@
 import { BaseHandler, WebhookEvent } from "gitlab-webhook-listener-bot";
 
 export class EventLogger extends BaseHandler {
+  public isValid(): boolean {
+    return true;
+  }
+
   public async handle(event: WebhookEvent): Promise<void> {
     const {
       headers: {
@@ -20,9 +24,5 @@ export class EventLogger extends BaseHandler {
     const user = event.payload.user || {};
 
     this.logger.debug(`Received ${content_length} bytes: ${event_title}: ${event_type || object_kind || event_name} event ${event_uuid} by @${user_username || user.username} (${user_name || user.name})`);
-  }
-
-  public isValid(): boolean {
-    return true;
   }
 }

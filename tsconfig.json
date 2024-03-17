@@ -2,8 +2,10 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
+    "rootDir": ".",
     "outDir": "dist",
     "declaration": true,
+    "incremental": true,
     "sourceMap": true,
     "pretty": true,
     "experimentalDecorators": true,
@@ -13,6 +15,7 @@
     ],
   },
   "include": [
-    "src/**/*.ts"
+    "demo/**/*.ts",
+    "src/**/*.ts",
   ]
 }

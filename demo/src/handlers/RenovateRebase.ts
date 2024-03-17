@@ -1,12 +1,6 @@
 import { WebhookEvent, MergeRequestHandler, MergeRequestPayload } from "gitlab-webhook-listener-bot";
 
 export class RenovateRebase extends MergeRequestHandler {
-  public async handle(event: WebhookEvent<MergeRequestPayload>): Promise<void> {
-    this.logger.debug("Renovate bot wants rebase");
-    // TODO: create pipeline
-    // code here to do the actual action
-  }
-
   /**
    * Must be an opened mr whose status is updated
    * and branch is renovate branch
@@ -30,5 +24,11 @@ export class RenovateRebase extends MergeRequestHandler {
       source_branch.startsWith("renovate/") &&
       (description?.current || "").includes("[x] <!-- rebase-check -->")
     );
+  }
+
+  public async handle(event: WebhookEvent<MergeRequestPayload>): Promise<void> {
+    this.logger.debug("Renovate bot wants rebase");
+    // TODO: create pipeline
+    // code here to do the actual action
   }
 }
