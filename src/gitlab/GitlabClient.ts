@@ -15,6 +15,23 @@ export class GitlabClient {
     });
   }
 
+  public async hasBranch(projectId: ProjectId, branchName: string) {
+    try {
+      return !!await this.api.Branches.show(projectId, branchName);
+    } catch (e: any) {
+      if (e.cause.description === "404 Branch Not Found") {
+        return false;
+      }
+
+      // Unknown error
+      throw e;
+    }
+  }
+
+  public async deleteBranch(projectId: ProjectId, branchName: string) {
+    return this.api.Branches.remove(projectId, branchName);
+  }
+
   public async getRegistryRepositoryByName(projectId: ProjectId, name: string) {
     // NOTE: There doesn't appear to be a method that would not involve fetching all repositories
     let repositories;
