@@ -15,5 +15,5 @@ export interface IssuePayload extends Payload {
   labels: Label[] | null;
   changes: Changes;
   repository: Repository;
-  assignees: User[] | null;
+  assignees?: User[];
 }

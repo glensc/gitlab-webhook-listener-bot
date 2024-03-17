@@ -9,13 +9,13 @@ export interface ObjectAttributes {
   action: string;
   created_at: DateTime;
   author_id: number;
-  assignee_id: number;
+  assignee_id: number | null;
   last_edited_at: DateTime | null;
   last_edited_by_id: number | null;
   updated_at: DateTime;
   updated_by_id: number | null;
   title: string;
-  description: string;
+  description: string | null;
   url: string;
   labels: Label[] | null;
   milestone_id: number | null;

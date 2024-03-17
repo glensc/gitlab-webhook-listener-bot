@@ -15,4 +15,5 @@ export interface IssueObjectAttributes extends ObjectAttributes {
   health_status: string | null;
   escalation_status?: string;
   escalation_policy?: null;
+  customer_relations_contacts?: [];
 }
