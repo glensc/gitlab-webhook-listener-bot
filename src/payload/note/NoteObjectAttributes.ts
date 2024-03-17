@@ -11,7 +11,7 @@ export interface NoteObjectAttributes {
   id: number;
   line_code: string | null;
   note: string;
-  noteable_id: number;
+  noteable_id: number | null;
   noteable_type: "MergeRequest" | "Commit" | "Issue" | "Snippet";
   original_position: Position | null;
   position: Position | null;
