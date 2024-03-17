@@ -2,6 +2,7 @@ import { logger, main, GitlabClient } from "gitlab-webhook-listener-bot";
 
 import {
   EventLogger,
+  MergeRequestClose,
   ProjectCreateEvent,
   RegistryCleanup,
   RenovateRebase,
@@ -15,6 +16,7 @@ main({
     new EventLogger(logger),
     new ProjectCreateEvent(logger),
     new RenovateRebase(logger),
+    new MergeRequestClose(gitlabClient, logger),
     new RegistryCleanup(gitlabClient, logger),
   ],
   async livenessProbe() {
