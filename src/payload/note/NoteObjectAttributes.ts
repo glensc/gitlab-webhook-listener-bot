@@ -17,7 +17,7 @@ export interface NoteObjectAttributes {
   position: Position | null;
   project_id: number;
   resolved_at: DateTime | null;
-  resolved_by_id?: null;
+  resolved_by_id?: number | null;
   resolved_by_push?: null;
   st_diff?: null;
   system: boolean;
