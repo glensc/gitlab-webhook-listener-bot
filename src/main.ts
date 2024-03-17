@@ -56,9 +56,10 @@ export const main = (options: Options): void => {
     const url: URL = server.get("url");
 
     logger.info("🕔 The server is now running at:");
-    logger.info(` - ${url}`);
-    logger.info(` - ${urlPath(url, "/probes/readiness")}`);
-    logger.info(` - ${urlPath(url, "/probes/liveness")}`);
+    logger.info(` - GET ${url}`);
+    logger.info(` - POST ${url}`);
+    logger.info(` - GET ${urlPath(url, "/probes/readiness")}`);
+    logger.info(` - GET ${urlPath(url, "/probes/liveness")}`);
   });
 
   const exitHandler = (signal: string) => {
