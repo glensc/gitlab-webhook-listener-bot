@@ -17,6 +17,7 @@ export interface Changes {
   draft?: PreviousAndCurrent<boolean>;
   due_date?: PreviousAndCurrent<string | null>;
   id?: PreviousAndCurrent<number | null>;
+  iid?: PreviousAndCurrent<number | null>;
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<DateTime | null>;
   last_edited_by_id?: PreviousAndCurrent<number | null>;
