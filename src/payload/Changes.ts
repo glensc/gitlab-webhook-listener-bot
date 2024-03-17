@@ -14,6 +14,7 @@ export interface Changes {
   closed_at?: PreviousAndCurrent<DateTime | null>;
   description?: PreviousAndCurrent<string | null>;
   draft?: PreviousAndCurrent<boolean>;
+  due_date?: PreviousAndCurrent<string | null>;
   labels?: PreviousAndCurrent<Label[]>;
   last_edited_at?: PreviousAndCurrent<DateTime | null>;
   last_edited_by_id?: PreviousAndCurrent<number | null>;
