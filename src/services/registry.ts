@@ -7,8 +7,8 @@ import type { Probe } from "../types";
 const noop = async (): Probe => {};
 
 export default new Registry({
-  "logger": logger,
-  "livenessProbe": noop,
-  "readinessProbe": noop,
-  "shutdownHandler": noop,
+  logger: logger,
+  livenessProbe: noop,
+  readinessProbe: noop,
+  shutdownHandler: noop,
 });
