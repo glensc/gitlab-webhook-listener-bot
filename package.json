@@ -10,12 +10,12 @@
     "listener",
     "webhook"
   ],
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./dist/index.js"
+    ".": "./dist/src/index.js"
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
     "ngrok": "ngrok --config ngrok.yml start app",
