@@ -35,7 +35,7 @@
     "@types/body-parser": "^1.19.5",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@gitbeaker/rest": "^39.34.3",
