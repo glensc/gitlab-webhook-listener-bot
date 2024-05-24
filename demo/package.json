@@ -8,7 +8,7 @@
     "gitlab-webhook-listener-bot": "file:.."
   },
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/node18": "^18.2.4",
     "@types/node": "^18.19.33",
     "nodemon": "^3.1.0",
     "tsx": "^4.11.0"

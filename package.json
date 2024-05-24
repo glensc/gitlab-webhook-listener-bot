@@ -31,7 +31,7 @@
   },
   "packageManager": "pnpm@8.15.4",
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/node18": "^18.2.4",
     "@types/body-parser": "^1.19.5",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.4",
