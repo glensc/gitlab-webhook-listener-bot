@@ -34,7 +34,7 @@
     "@tsconfig/node18": "^18.2.2",
     "@types/body-parser": "^1.19.5",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.4",
     "typescript": "^5.4.5"
   },
   "dependencies": {
