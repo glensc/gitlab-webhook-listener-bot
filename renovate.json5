@@ -19,5 +19,11 @@
       ],
       "rangeStrategy": "bump",
     },
+    // https://docs.renovatebot.com/configuration-options/#automerge
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+    },
   ],
 }
