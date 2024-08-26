@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@gitbeaker/rest':
-    specifier: ^40.0.3
-    version: 40.0.3
+    specifier: ^40.1.3
+    version: 40.1.3
   '@types/express':
     specifier: ^4.17.21
     version: 4.17.21
@@ -46,31 +46,31 @@ devDependencies:
 
 packages:
 
-  /@gitbeaker/core@40.0.3:
-    resolution: {integrity: sha512-MzeY4oCtoa9zmPIkQIdC2KU8cGmHIXwnAi0L6jjjouqjy6kcA4BydZf8W5Xsj27Rw5iiyhfj8YC1/O3CgrzvCQ==}
-    engines: {node: '>=18.0.0'}
+  /@gitbeaker/core@40.1.3:
+    resolution: {integrity: sha512-704bRTVFI+2rropt/ZCxMp7HdlAbuOlvzlB5Hu8icBauh+NMOhAJFISDE3LG/Tbf1LXa1F5hSg8dVYzXYJNB9w==}
+    engines: {node: '>=18.20.0'}
     dependencies:
-      '@gitbeaker/requester-utils': 40.0.3
-      qs: 6.12.1
+      '@gitbeaker/requester-utils': 40.1.3
+      qs: 6.13.0
       xcase: 2.0.1
     dev: false
 
-  /@gitbeaker/requester-utils@40.0.3:
-    resolution: {integrity: sha512-L8JpuMIsvXTHfu/2wXzkc5QyfQJSWg4XyEPStHq1ig5SAcbxxqbBoe8ed27eUXLah+PcGrPInMK4cCMxhQm41g==}
-    engines: {node: '>=18.0.0'}
+  /@gitbeaker/requester-utils@40.1.3:
+    resolution: {integrity: sha512-ruHu/lvvTdE6JPoUzEmiZY4Ef9U+5Iam5cgcB/vMYTfBx89iwlPGj/sGHIbJPWSdwoGnrn+sGp8+KygqDr3Zgw==}
+    engines: {node: '>=18.20.0'}
     dependencies:
       picomatch-browser: 2.2.6
-      qs: 6.12.1
+      qs: 6.13.0
       rate-limiter-flexible: 4.0.1
       xcase: 2.0.1
     dev: false
 
-  /@gitbeaker/rest@40.0.3:
-    resolution: {integrity: sha512-ihaA0GX3yCo4oUWbISkcjFMIw+WxDAC9L+bEYq2irz4wpv/0EpAU/0jKjggPzY4cGWL9VAyPhew77VeACv4YWw==}
-    engines: {node: '>=18.0.0'}
+  /@gitbeaker/rest@40.1.3:
+    resolution: {integrity: sha512-3xzImKoCTdlFyLUgnG+RjnWJmOtOhAFf7+A5+3r3nOCKOAZHGlknvPouNBQ2hCl8lRLBEHXgBA40ASv1SGvRfQ==}
+    engines: {node: '>=18.20.0'}
     dependencies:
-      '@gitbeaker/core': 40.0.3
-      '@gitbeaker/requester-utils': 40.0.3
+      '@gitbeaker/core': 40.1.3
+      '@gitbeaker/requester-utils': 40.1.3
     dev: false
 
   /@tsconfig/node18@18.2.4:
@@ -909,8 +909,8 @@ packages:
       side-channel: 1.0.6
     dev: false
 
-  /qs@6.12.1:
-    resolution: {integrity: sha512-zWmv4RSuB9r2mYQw3zxQuHWeU+42aKi1wWig/j4ele4ygELZ7PEO6MM7rim9oAQH2A5MWfsAVf/jPvTPgCbvUQ==}
+  /qs@6.13.0:
+    resolution: {integrity: sha512-+38qI9SOr8tfZ4QmJNplMUxqjbe7LKvvZgWdExBOmd+egZTtjLB67Gu0HRX3u/XOq7UU2Nx6nsjvS16Z9uwfpg==}
     engines: {node: '>=0.6'}
     dependencies:
       side-channel: 1.0.6
