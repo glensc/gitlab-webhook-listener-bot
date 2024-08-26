@@ -6,4 +6,4 @@ PS4="${c}⦿${r} "
 
 echo "Running pre-commit hooks"
 set -x
-node_modules/.bin/lint-staged -c .lintstagedrc.json
+lint-staged -c .lintstagedrc.json
