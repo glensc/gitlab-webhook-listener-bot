@@ -40,7 +40,7 @@
   "dependencies": {
     "@gitbeaker/rest": "^42.1.0",
     "@types/express": "^4.17.21",
-    "@types/node": "^18.19.68",
+    "@types/node": "^18.19.80",
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "pino": "^8.21.0",
