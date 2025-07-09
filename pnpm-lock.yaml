@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@gitbeaker/rest':
-        specifier: ^42.1.0
-        version: 42.1.0
+        specifier: ^42.5.0
+        version: 42.5.0
       '@types/express':
         specifier: ^4.17.23
         version: 4.17.23
@@ -48,16 +48,16 @@ importers:
 
 packages:
 
-  '@gitbeaker/core@42.1.0':
-    resolution: {integrity: sha512-xoP3mUjiGyUdN+utmQ+wDh9r7b4bcf3wa8jxkDTZTiuyd7Tg+354nJhwBNBsq2vFfyQvONOyOT1hsFjTGbTpBA==}
+  '@gitbeaker/core@42.5.0':
+    resolution: {integrity: sha512-rMWpOPaZi1iLiifnOIoVO57p2EmQQdfIwP4txqNyMvG4WjYP5Ez0U7jRD9Nra41x6K5kTPBZkuQcAdxVWRJcEQ==}
     engines: {node: '>=18.20.0'}
 
-  '@gitbeaker/requester-utils@42.1.0':
-    resolution: {integrity: sha512-q5NXy563UUM2AisM/V6Z3A92hIVQNMyx/VBj5Mg7gJkEtIYL+pEyibjIQxcq6nQ3bnj6bkM8NYguCs5tg7GR0Q==}
+  '@gitbeaker/requester-utils@42.5.0':
+    resolution: {integrity: sha512-HLdLS9LPBMVQumvroQg/4qkphLDtwDB+ygEsrD2u4oYCMUtXV4V1xaVqU4yTXjbTJ5sItOtdB43vYRkBcgueBw==}
     engines: {node: '>=18.20.0'}
 
-  '@gitbeaker/rest@42.1.0':
-    resolution: {integrity: sha512-7eSXktkUEF2O2A3F1cO/ZJ/3Mco4v59rptghzhrvjZryPcAxlYWxNJbuFtjc5bc0OnJW7i5AYfJSYvZQSh3gYg==}
+  '@gitbeaker/rest@42.5.0':
+    resolution: {integrity: sha512-oC5cM6jS7aFOp0luTw5mWSRuMgdxwHRLZQ/aWkI+ETMfsprR/HyxsXfljlMY/XJ/fRxTbRJiodR5Axf66WjO3w==}
     engines: {node: '>=18.20.0'}
 
   '@tsconfig/node18@18.2.4':
@@ -760,23 +760,23 @@ packages:
 
 snapshots:
 
-  '@gitbeaker/core@42.1.0':
+  '@gitbeaker/core@42.5.0':
     dependencies:
-      '@gitbeaker/requester-utils': 42.1.0
+      '@gitbeaker/requester-utils': 42.5.0
       qs: 6.14.0
       xcase: 2.0.1
 
-  '@gitbeaker/requester-utils@42.1.0':
+  '@gitbeaker/requester-utils@42.5.0':
     dependencies:
       picomatch-browser: 2.2.6
       qs: 6.14.0
       rate-limiter-flexible: 4.0.1
       xcase: 2.0.1
 
-  '@gitbeaker/rest@42.1.0':
+  '@gitbeaker/rest@42.5.0':
     dependencies:
-      '@gitbeaker/core': 42.1.0
-      '@gitbeaker/requester-utils': 42.1.0
+      '@gitbeaker/core': 42.5.0
+      '@gitbeaker/requester-utils': 42.5.0
 
   '@tsconfig/node18@18.2.4': {}
 
