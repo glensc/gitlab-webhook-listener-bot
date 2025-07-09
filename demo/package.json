@@ -10,7 +10,7 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
     "@types/node": "^18.19.80",
-    "nodemon": "^3.1.9",
+    "nodemon": "^3.1.10",
     "tsx": "^4.19.3"
   }
 }
