@@ -4,6 +4,8 @@ import type { ObjectAttributes } from "../ObjectAttributes";
 import type { Project } from "../Project";
 
 export interface MergeRequestObjectAttributes extends ObjectAttributes {
+  // https://docs.gitlab.com/user/project/integrations/webhook_events/#payload-structure
+  action?: "open" | "close" | "reopen" | "update" | "approval" | "approved" | "unapproval" | "unapproved" | "merge";
   draft: boolean;
   head_pipeline_id: number | null;
   merge_commit_sha: string | null;
