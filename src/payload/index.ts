@@ -10,3 +10,4 @@ export { PipelinePayload } from "./pipeline/PipelinePayload";
 export { ProjectCreatePayload } from "./project/ProjectCreatePayload";
 export { ProjectRenamePayload } from "./project/ProjectRenamePayload";
 export { ProjectUpdatePayload } from "./project/ProjectUpdatePayload";
+export { User } from "./User";
