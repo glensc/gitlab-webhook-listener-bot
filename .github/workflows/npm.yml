@@ -5,6 +5,10 @@ on:
     tags:
       - "*.*.*"
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -41,7 +45,5 @@ jobs:
 
       - name: Publish
         run: pnpm publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 # vim:ft=yaml:et:ts=2:sw=2
