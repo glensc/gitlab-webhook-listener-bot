@@ -37,7 +37,7 @@ jobs:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
       - run: pnpm set-version
         env:
