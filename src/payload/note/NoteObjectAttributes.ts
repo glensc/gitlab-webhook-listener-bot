@@ -2,6 +2,7 @@ import type { Position } from "./Position";
 import type { DateTime } from "../types";
 
 export interface NoteObjectAttributes {
+  action?: string;
   attachment?: null;
   author_id: number;
   change_position: Position | null;
@@ -9,6 +10,7 @@ export interface NoteObjectAttributes {
   created_at: string;
   discussion_id: string;
   id: number;
+  internal?: boolean;
   line_code: string | null;
   note: string;
   noteable_id: number | null;
