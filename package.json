@@ -2,6 +2,10 @@
   "name": "gitlab-webhook-listener-bot",
   "description": "Listen to GitLab WebHook and execute actions",
   "homepage": "https://github.com/glensc/gitlab-webhook-listener-bot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glensc/gitlab-webhook-listener-bot.git"
+  },
   "license": "MIT",
   "keywords": [
     "gitlab",
