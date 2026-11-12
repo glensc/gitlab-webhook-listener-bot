@@ -42,7 +42,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@gitbeaker/rest": "^43.8.0",
+    "@gitbeaker/rest": "^44.0.5",
     "@types/express": "^4.17.25",
     "@types/node": "^22.20.5",
     "body-parser": "^2.4.0",
